@@ -13,7 +13,14 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if (FBSDKAccessToken.currentAccessToken() == nil) {
+            self.displayModal();
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +28,11 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func displayModal() {
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("FacebookLoginViewController") as FacebookLoginViewController
+        vc.view.backgroundColor = UIColor.whiteColor();
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

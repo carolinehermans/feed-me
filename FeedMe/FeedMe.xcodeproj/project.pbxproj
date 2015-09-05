@@ -20,6 +20,7 @@
 		27B9FAEF1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAEC1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework */; };
 		27B9FAF01B9A6EC600701AC6 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAED1B9A6EC600701AC6 /* FBSDKShareKit.framework */; };
 		27B9FAF31B9A70DA00701AC6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAF21B9A70DA00701AC6 /* Bolts.framework */; };
+		D9CEE4911B9A8F790010E71D /* FacebookLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CEE4901B9A8F790010E71D /* FacebookLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		27B9FAED1B9A6EC600701AC6 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		27B9FAF11B9A6F3200701AC6 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
 		27B9FAF21B9A70DA00701AC6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		D9CEE4901B9A8F790010E71D /* FacebookLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				27B9FAF11B9A6F3200701AC6 /* Bridging-Header.h */,
 				27B9FAC41B9A69DD00701AC6 /* AppDelegate.swift */,
 				27B9FAC91B9A69DD00701AC6 /* ViewController.swift */,
+				D9CEE4901B9A8F790010E71D /* FacebookLoginViewController.swift */,
 				27B9FACB1B9A69DD00701AC6 /* Main.storyboard */,
 				27B9FACE1B9A69DD00701AC6 /* Images.xcassets */,
 				27B9FAD01B9A69DD00701AC6 /* LaunchScreen.xib */,
@@ -242,6 +245,7 @@
 			files = (
 				27B9FACA1B9A69DD00701AC6 /* ViewController.swift in Sources */,
 				27B9FAC51B9A69DD00701AC6 /* AppDelegate.swift in Sources */,
+				D9CEE4911B9A8F790010E71D /* FacebookLoginViewController.swift in Sources */,
 				27B9FAC81B9A69DD00701AC6 /* FeedMe.xcdatamodeld in Sources */,
 				274ED2D21B9A827000B279AC /* HomeViewController.swift in Sources */,
 			);
