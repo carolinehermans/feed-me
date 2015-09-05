@@ -185,6 +185,8 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             items.removeAtIndex(indexPath.row)
+            self.tableView.reloadData()
+            self.tableView.editing = false
         }
     }
 
