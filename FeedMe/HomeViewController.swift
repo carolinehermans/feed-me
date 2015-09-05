@@ -70,7 +70,13 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             foodImage = pickedImage;
         }
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: {
+            if let image = self.foodImage {
+                let vc = self.storyboard?.instantiateViewControllerWithIdentifier("ImageProcessingViewController") as! ImageProcessingViewController
+                vc.image = image;
+                self.navigationController?.pushViewController(vc, animated: true);
+            }
+        })
     }
     
     

@@ -46,12 +46,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Fridge" id="Fsu-zS-AiN"/>
                     <navigationItem key="navigationItem" title="Home Page" id="cGN-zI-WBV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sG-8I-SQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011" y="976"/>
+            <point key="canvasLocation" x="1543" y="976"/>
         </scene>
         <!--Image Processing View Controller-->
         <scene sceneID="7oc-kq-5Mk">
@@ -60,12 +59,21 @@
                     <view key="view" contentMode="scaleToFill" id="rfz-FQ-htR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6hz-cl-ofd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="6hz-cl-ofd" id="zHE-P1-0P8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1n-DM-lNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1369" y="975"/>
+            <point key="canvasLocation" x="1901" y="975"/>
         </scene>
         <!--Cook-->
         <scene sceneID="0JQ-pQ-2Ks">
@@ -108,7 +116,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="88g-Q3-vPQ" kind="relationship" relationship="viewControllers" id="L6b-bR-okn"/>
+                        <segue destination="Fzz-OS-LGB" kind="relationship" relationship="viewControllers" id="L6b-bR-okn"/>
                         <segue destination="pAD-A8-VGm" kind="relationship" relationship="viewControllers" id="7Cv-7p-ohV"/>
                         <segue destination="VUz-0E-N8d" kind="relationship" relationship="viewControllers" id="Npl-V7-xIZ"/>
                     </connections>
@@ -116,6 +124,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOS-lf-Vz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="611" y="976"/>
+        </scene>
+        <!--My Fridge-->
+        <scene sceneID="LUR-Cf-asQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fzz-OS-LGB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Fridge" id="Fsu-zS-AiN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oNI-5Q-e46">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="88g-Q3-vPQ" kind="relationship" relationship="rootViewController" id="4cd-ME-h5g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kOS-NR-YBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011" y="976"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

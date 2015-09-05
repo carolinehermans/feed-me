@@ -10,9 +10,13 @@ import UIKit
 
 class ImageProcessingViewController: UIViewController {
 
+    @IBOutlet var imageView : UIImageView!
+    var image : UIImage!;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.imageView.image = self.image;
         // Do any additional setup after loading the view.
     }
 
