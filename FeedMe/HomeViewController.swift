@@ -43,7 +43,10 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
+        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        self.presentViewController(imagePicker, animated: true, completion: nil)
         
+        /*
         let optionMenu = UIAlertController(title: "Add Food", message: nil, preferredStyle: .ActionSheet)
         
         let fromCamera = UIAlertAction(title: "From Camera", style: .Default, handler: {
@@ -61,6 +64,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         optionMenu.addAction(fromPhotoRoll)
 
         self.presentViewController(optionMenu, animated: true, completion: nil)
+        */
     }
 
     // MARK: - UIImagePickerControllerDelegate Methods
@@ -74,7 +78,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             if let image = self.foodImage {
                 let vc = self.storyboard?.instantiateViewControllerWithIdentifier("ImageProcessingViewController") as! ImageProcessingViewController
                 vc.image = image;
-                self.navigationController?.pushViewController(vc, animated: true);
+                self.presentViewController(vc, animated: true, completion: nil);
             }
         })
     }

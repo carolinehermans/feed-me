@@ -17,6 +17,8 @@ class ImageProcessingViewController: UIViewController {
         super.viewDidLoad()
 
         self.imageView.image = self.image;
+        println(image.size);
+        drawCustomImage(CGPointMake(0,0), bottomRight: CGPointMake(100,100))
         // Do any additional setup after loading the view.
     }
 
@@ -25,7 +27,38 @@ class ImageProcessingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func dismiss() {
+        self.dismissViewControllerAnimated(true, completion: nil);
+    }
+    
+    func drawCustomImage(topLeft : CGPoint, bottomRight : CGPoint) {
+        var size = CGSizeMake(abs(topLeft.x - bottomRight.x), abs(topLeft.y - bottomRight.y))
+        // Setup our context
+        let bounds = CGRect(origin: CGPoint.zeroPoint, size: size)
+        let opaque = false
+        let scale: CGFloat = 0
+        UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
+        let context = UIGraphicsGetCurrentContext()
+        
+        // Setup complete, do drawing here
+        CGContextSetStrokeColorWithColor(context, UIColor.redColor().CGColor)
+        CGContextSetLineWidth(context, 2.0)
+        
+        CGContextStrokeRect(context, bounds)
+        
+        CGContextBeginPath(context)
+        CGContextMoveToPoint(context, CGRectGetMinX(bounds), CGRectGetMinY(bounds))
+        
+        CGContextStrokePath(context)
+        
+        // Drawing complete, retrieve the finished image and cleanup
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        var imageView = UIImageView(frame: CGRect(origin: topLeft, size: size))
+        self.imageView.addSubview(imageView)
+        println(self.imageView.frame);
+        imageView.image = image;
+    }
     /*
     // MARK: - Navigation
 
