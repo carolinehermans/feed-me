@@ -21,9 +21,6 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="88g-Q3-vPQ" kind="show" id="h2e-hD-jAx"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -36,12 +33,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1436.25" y="361.26760563380282"/>
+            <point key="canvasLocation" x="1146" y="361"/>
         </scene>
         <!--Home Page-->
         <scene sceneID="lxZ-MW-YlP">
             <objects>
-                <viewController id="88g-Q3-vPQ" customClass="HomeViewController" customModule="FeedMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="88g-Q3-vPQ" customClass="HomeViewController" customModule="FeedMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6WS-tZ-bxm"/>
                         <viewControllerLayoutGuide type="bottom" id="jZZ-dn-wDk"/>
@@ -81,11 +78,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sG-8I-SQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2124.375" y="361.26760563380282"/>
+            <point key="canvasLocation" x="1146" y="1031"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QLC-2n-EHH">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewT-8v-ja6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pI9-oG-zbP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="knC-E5-lbt">
@@ -97,9 +95,8 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="TUn-sL-7yI"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ewT-8v-ja6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438.75" y="361.26760563380282"/>
+            <point key="canvasLocation" x="406" y="361"/>
         </scene>
     </scenes>
 </document>

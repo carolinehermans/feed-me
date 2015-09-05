@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		274ED2D21B9A827000B279AC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274ED2D11B9A827000B279AC /* HomeViewController.swift */; };
 		27B9FAC51B9A69DD00701AC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FAC41B9A69DD00701AC6 /* AppDelegate.swift */; };
 		27B9FAC81B9A69DD00701AC6 /* FeedMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FAC61B9A69DD00701AC6 /* FeedMe.xcdatamodeld */; };
 		27B9FACA1B9A69DD00701AC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FAC91B9A69DD00701AC6 /* ViewController.swift */; };
@@ -14,7 +15,6 @@
 		27B9FACF1B9A69DD00701AC6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B9FACE1B9A69DD00701AC6 /* Images.xcassets */; };
 		27B9FAD21B9A69DD00701AC6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B9FAD01B9A69DD00701AC6 /* LaunchScreen.xib */; };
 		27B9FADE1B9A69DD00701AC6 /* FeedMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FADD1B9A69DD00701AC6 /* FeedMeTests.swift */; };
-		27B9FAE81B9A6C7700701AC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FAE71B9A6C7700701AC6 /* HomeViewController.swift */; };
 		27B9FAEA1B9A6EBB00701AC6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAE91B9A6EBB00701AC6 /* FBSDKCoreKit.framework */; };
 		27B9FAEE1B9A6EC600701AC6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAEB1B9A6EC600701AC6 /* FBSDKLoginKit.framework */; };
 		27B9FAEF1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAEC1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework */; };
@@ -33,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		274ED2D11B9A827000B279AC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
 		27B9FABF1B9A69DD00701AC6 /* FeedMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B9FAC31B9A69DD00701AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B9FAC41B9A69DD00701AC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		27B9FAD71B9A69DD00701AC6 /* FeedMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B9FADC1B9A69DD00701AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B9FADD1B9A69DD00701AC6 /* FeedMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMeTests.swift; sourceTree = "<group>"; };
-		27B9FAE71B9A6C7700701AC6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		27B9FAE91B9A6EBB00701AC6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		27B9FAEB1B9A6EC600701AC6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		27B9FAEC1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
@@ -102,10 +102,10 @@
 		27B9FAC11B9A69DD00701AC6 /* FeedMe */ = {
 			isa = PBXGroup;
 			children = (
+				274ED2D11B9A827000B279AC /* HomeViewController.swift */,
 				27B9FAF11B9A6F3200701AC6 /* Bridging-Header.h */,
 				27B9FAC41B9A69DD00701AC6 /* AppDelegate.swift */,
 				27B9FAC91B9A69DD00701AC6 /* ViewController.swift */,
-				27B9FAE71B9A6C7700701AC6 /* HomeViewController.swift */,
 				27B9FACB1B9A69DD00701AC6 /* Main.storyboard */,
 				27B9FACE1B9A69DD00701AC6 /* Images.xcassets */,
 				27B9FAD01B9A69DD00701AC6 /* LaunchScreen.xib */,
@@ -243,7 +243,7 @@
 				27B9FACA1B9A69DD00701AC6 /* ViewController.swift in Sources */,
 				27B9FAC51B9A69DD00701AC6 /* AppDelegate.swift in Sources */,
 				27B9FAC81B9A69DD00701AC6 /* FeedMe.xcdatamodeld in Sources */,
-				27B9FAE81B9A6C7700701AC6 /* HomeViewController.swift in Sources */,
+				274ED2D21B9A827000B279AC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
