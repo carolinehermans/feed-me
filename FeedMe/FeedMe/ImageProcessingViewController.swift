@@ -15,7 +15,7 @@ class ImageProcessingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        println("here")
         self.imageView.image = self.image;
         println(image.size);
         drawCustomImage(CGPointMake(0,0), bottomRight: CGPointMake(100,100))
