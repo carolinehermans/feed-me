@@ -14,7 +14,7 @@
                     <rect key="frame" x="-6" y="0.0" width="606" height="605"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It looks like you don't have any ingredients saved." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZ4-LP-CTl">
-                    <rect key="frame" x="8" y="159" width="584" height="110"/>
+                    <rect key="frame" x="8" y="164" width="584" height="110"/>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
                     <color key="textColor" red="0.73725490199999999" green="0.3294117647" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>

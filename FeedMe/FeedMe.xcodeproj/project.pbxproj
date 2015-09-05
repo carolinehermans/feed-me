@@ -35,6 +35,7 @@
 		D92925F81B9B117100786598 /* foodicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925F71B9B117100786598 /* foodicon.png */; };
 		D92925FA1B9B11AF00786598 /* fruiticon.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925F91B9B11AF00786598 /* fruiticon.png */; };
 		D92925FC1B9B12D000786598 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925FB1B9B12D000786598 /* logo.png */; };
+		D92925FE1B9B276000786598 /* pointyrectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925FD1B9B276000786598 /* pointyrectangle.png */; };
 		D99E371B1B9AEA7A0091C09A /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */; };
 		D99E371D1B9AF0310091C09A /* camicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D99E371C1B9AF0300091C09A /* camicon.png */; };
 		D99E371F1B9AF1070091C09A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */; };
@@ -85,6 +86,7 @@
 		D92925F71B9B117100786598 /* foodicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodicon.png; sourceTree = "<group>"; };
 		D92925F91B9B11AF00786598 /* fruiticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fruiticon.png; sourceTree = "<group>"; };
 		D92925FB1B9B12D000786598 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		D92925FD1B9B276000786598 /* pointyrectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointyrectangle.png; sourceTree = "<group>"; };
 		D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PatrickHand-Regular.ttf"; sourceTree = "<group>"; };
 		D99E371C1B9AF0300091C09A /* camicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camicon.png; sourceTree = "<group>"; };
 		D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				D92925F71B9B117100786598 /* foodicon.png */,
 				D92925F51B9B116A00786598 /* hearticon.png */,
 				D99E371C1B9AF0300091C09A /* camicon.png */,
+				D92925FD1B9B276000786598 /* pointyrectangle.png */,
 				27A64B6A1B9AF8C5002E90F8 /* rectangle.png */,
 				27A64B6B1B9AF8C5002E90F8 /* tinyfeedme.png */,
 			);
@@ -323,6 +326,7 @@
 				D92925F81B9B117100786598 /* foodicon.png in Resources */,
 				27B9FACF1B9A69DD00701AC6 /* Images.xcassets in Resources */,
 				27A64B6C1B9AF8C5002E90F8 /* rectangle.png in Resources */,
+				D92925FE1B9B276000786598 /* pointyrectangle.png in Resources */,
 				D99E371D1B9AF0310091C09A /* camicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
