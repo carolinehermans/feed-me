@@ -22,12 +22,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if (FBSDKAccessToken.currentAccessToken() == nil) {
             self.displayModal()
         }
-        var user = User()
-        user.fbid = "654321"
-        user.name = "name"
-        var server = Server()
-        server.getAllFriends(user)
-        //self.getLocalUser()
+        self.getLocalUser()
     }
     
     func getLocalUser() -> Void {
@@ -66,15 +61,10 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
-    
     @IBAction func showActionSheet(sender: AnyObject) {
-        
-        let imagePicker = UIImagePickerController()
-        
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+        var captureScreen = CapturePhotoViewController()
+        captureScreen.view.backgroundColor = UIColor(red: 247/255.0, green: 237/255.0, blue: 206/255.0, alpha: 1.0)
+        self.presentViewController(captureScreen, animated: true, completion: nil)
         
         /*
         let optionMenu = UIAlertController(title: "Add Food", message: nil, preferredStyle: .ActionSheet)
