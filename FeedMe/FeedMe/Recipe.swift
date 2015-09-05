@@ -13,4 +13,7 @@ class Recipe: NSObject {
     var servings = 0;
     var unit = "";
     var ingredients = [Food]();
+    var ingredientAmounts = [Int]();
+    var ingredientUnits = [String]();
+    var prepTime = "";
 }
