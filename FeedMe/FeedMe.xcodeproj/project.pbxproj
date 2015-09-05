@@ -17,6 +17,8 @@
 		27A64B751B9AFE1C002E90F8 /* RecipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A64B741B9AFE1C002E90F8 /* RecipeView.xib */; };
 		27A64B7B1B9B0500002E90F8 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64B7A1B9B0500002E90F8 /* Server.swift */; };
 		27A64B7D1B9B054A002E90F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64B7C1B9B054A002E90F8 /* User.swift */; };
+		27ADFFE11B9B3E73005691CA /* CapturePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ADFFE01B9B3E73005691CA /* CapturePhotoViewController.swift */; };
+		27ADFFE31B9B599D005691CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27ADFFE21B9B599D005691CA /* QuartzCore.framework */; };
 		27B934F21B9AA8A7004CDCB7 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B934F11B9AA8A7004CDCB7 /* Food.swift */; };
 		27B934F51B9AAA2D004CDCB7 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B934F41B9AAA2D004CDCB7 /* Recipe.swift */; };
 		27B934F71B9AB1D3004CDCB7 /* ImageProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B934F61B9AB1D3004CDCB7 /* ImageProcessingViewController.swift */; };
@@ -64,6 +66,8 @@
 		27A64B741B9AFE1C002E90F8 /* RecipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeView.xib; sourceTree = "<group>"; };
 		27A64B7A1B9B0500002E90F8 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		27A64B7C1B9B054A002E90F8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		27ADFFE01B9B3E73005691CA /* CapturePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapturePhotoViewController.swift; sourceTree = "<group>"; };
+		27ADFFE21B9B599D005691CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		27B934F11B9AA8A7004CDCB7 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		27B934F41B9AAA2D004CDCB7 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		27B934F61B9AB1D3004CDCB7 /* ImageProcessingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessingViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27ADFFE31B9B599D005691CA /* QuartzCore.framework in Frameworks */,
 				27B9FAF31B9A70DA00701AC6 /* Bolts.framework in Frameworks */,
 				27B9FAF01B9A6EC600701AC6 /* FBSDKShareKit.framework in Frameworks */,
 				27B9FAEE1B9A6EC600701AC6 /* FBSDKLoginKit.framework in Frameworks */,
@@ -165,6 +170,7 @@
 		27B9FAB61B9A69DD00701AC6 = {
 			isa = PBXGroup;
 			children = (
+				27ADFFE21B9B599D005691CA /* QuartzCore.framework */,
 				27B9FAF21B9A70DA00701AC6 /* Bolts.framework */,
 				27B9FAEB1B9A6EC600701AC6 /* FBSDKLoginKit.framework */,
 				27B9FAEC1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework */,
@@ -193,6 +199,7 @@
 				27A64B681B9AF71D002E90F8 /* FeedMeTabBarControllerViewController.swift */,
 				27B934F31B9AA8AC004CDCB7 /* FeedMe Data Structures */,
 				274ED2D11B9A827000B279AC /* HomeViewController.swift */,
+				27ADFFE01B9B3E73005691CA /* CapturePhotoViewController.swift */,
 				D9CEE4901B9A8F790010E71D /* FacebookLoginViewController.swift */,
 				27B934F61B9AB1D3004CDCB7 /* ImageProcessingViewController.swift */,
 				27B9FACB1B9A69DD00701AC6 /* Main.storyboard */,
@@ -354,6 +361,7 @@
 				27A64B691B9AF71D002E90F8 /* FeedMeTabBarControllerViewController.swift in Sources */,
 				D9CEE4911B9A8F790010E71D /* FacebookLoginViewController.swift in Sources */,
 				27A64B731B9AFE0E002E90F8 /* RecipeView.swift in Sources */,
+				27ADFFE11B9B3E73005691CA /* CapturePhotoViewController.swift in Sources */,
 				27B9FAC81B9A69DD00701AC6 /* FeedMe.xcdatamodeld in Sources */,
 				27A64B7B1B9B0500002E90F8 /* Server.swift in Sources */,
 				27A64B6F1B9AFDC6002E90F8 /* NoIngredientsView.swift in Sources */,
