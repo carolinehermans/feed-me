@@ -92,6 +92,10 @@
                                 <rect key="frame" x="64" y="156" width="193" height="237"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="88g-Q3-vPQ" id="rkK-az-ABi"/>
+                                    <outlet property="delegate" destination="88g-Q3-vPQ" id="jUg-g3-vH5"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -99,6 +103,7 @@
                     <tabBarItem key="tabBarItem" title="My Ingredients" image="fruiticon.png" id="Fsu-zS-AiN"/>
                     <navigationItem key="navigationItem" title="Home Page" id="cGN-zI-WBV"/>
                     <connections>
+                        <outlet property="tableView" destination="y2p-2d-Meo" id="7Vw-su-hLS"/>
                         <outlet property="textField" destination="HC0-gH-xHJ" id="WrB-q0-cIa"/>
                     </connections>
                 </viewController>

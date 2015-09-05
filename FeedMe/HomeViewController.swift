@@ -8,12 +8,15 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     var foodImage : UIImage? = nil;
     var localUser : User = User();
+    var items: [String] = ["Milk", "Eggs", "Cheese"]
+    var bgColor = UIColor(red: 253/255.0, green: 251/255.0, blue: 243/255.0, alpha: 255/255.0)
     
     @IBOutlet var textField : UITextField!
+    @IBOutlet var tableView: UITableView!
     
 
    
@@ -25,6 +28,8 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         textField.delegate = self
         var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.backgroundColor = bgColor
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -139,5 +144,25 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: uitableview stuf
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        
+        cell.textLabel?.text = self.items[indexPath.row]
+        cell.backgroundColor = bgColor
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 
 }
