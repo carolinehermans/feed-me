@@ -4,14 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <customFonts key="customFonts">
-<<<<<<< HEAD
         <mutableArray key="Montserrat-Bold.ttf">
             <string>Montserrat-Bold</string>
-=======
+        </mutableArray>
         <mutableArray key="PatrickHand-Regular.ttf">
             <string>PatrickHand-Regular</string>
             <string>PatrickHand-Regular</string>
->>>>>>> 4f37c350303176526e1ec0c9097b41cfc22353fe
         </mutableArray>
     </customFonts>
     <scenes>
@@ -81,7 +79,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Fridge" id="Fsu-zS-AiN"/>
+                    <tabBarItem key="tabBarItem" title="My Fridge" image="camicon.png" id="Fsu-zS-AiN"/>
                     <navigationItem key="navigationItem" title="Home Page" id="cGN-zI-WBV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sG-8I-SQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -151,10 +149,10 @@
             </objects>
             <point key="canvasLocation" x="1011" y="1657"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Feed Me Tab Bar Controller View Controller-->
         <scene sceneID="Zrb-FV-A8n">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="FVJ-XZ-3xE" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="FVJ-XZ-3xE" customClass="FeedMeTabBarControllerViewController" customModule="FeedMe" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="v2m-ml-B18">
