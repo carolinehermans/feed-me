@@ -275,7 +275,6 @@
             </objects>
             <point key="canvasLocation" x="611" y="976"/>
         </scene>
-<<<<<<< HEAD
         <!--Table View Controller-->
         <scene sceneID="tsu-oG-0wH">
             <objects>
@@ -304,8 +303,6 @@
             </objects>
             <point key="canvasLocation" x="600" y="341"/>
         </scene>
-=======
->>>>>>> 44585a14cf0feafd6c7e190fb862074c2039a89a
     </scenes>
     <resources>
         <image name="camicon.png" width="53" height="53"/>
