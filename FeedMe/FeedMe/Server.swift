@@ -88,7 +88,7 @@ class Server: NSObject {
     func submitIngredients(user: User, ingredients: [String]) -> Bool {
         var ingredientString = ""
         for ingredient in ingredients {
-            ingredientString += ingredient
+            ingredientString += ingredient.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
             if (ingredient != ingredients.last) {
                 ingredientString += ","
             }
@@ -111,7 +111,7 @@ class Server: NSObject {
         let url = NSURL(string: urlString)
         var data = NSData(contentsOfURL: url!)
         if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
-            if let val = json["val"] as? NSNumber {
+            if let val = json["val"] as? NSArray {
                 return []
             }
         }
