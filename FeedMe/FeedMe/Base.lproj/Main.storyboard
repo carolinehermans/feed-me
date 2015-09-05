@@ -4,8 +4,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <customFonts key="customFonts">
+<<<<<<< HEAD
         <mutableArray key="Montserrat-Bold.ttf">
             <string>Montserrat-Bold</string>
+=======
+        <mutableArray key="PatrickHand-Regular.ttf">
+            <string>PatrickHand-Regular</string>
+            <string>PatrickHand-Regular</string>
+>>>>>>> 4f37c350303176526e1ec0c9097b41cfc22353fe
         </mutableArray>
     </customFonts>
     <scenes>
@@ -17,31 +23,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DEj-ob-aCn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FeedMe" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DEj-ob-aCn">
                                 <rect key="frame" x="61" y="73" width="199" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Feed">
-                                        <attributes>
-                                            <color key="NSColor" red="0.70980392156862748" green="0.25882352941176467" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="55" name="PatrickHand-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Me">
-                                        <attributes>
-                                            <color key="NSColor" red="0.80392156862745101" green="0.47058823529411764" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="55" name="PatrickHand-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="55"/>
+                                <color key="textColor" red="0.70980392156862748" green="0.25882352941176467" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.70980392156862748" green="0.25882352941176467" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipes to fit your kitchen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bZh-83-DjE">
-                                <rect key="frame" x="61" y="172" width="200" height="21"/>
+                                <rect key="frame" x="61" y="172" width="200" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="17"/>
                                 <color key="textColor" red="0.80392156862745101" green="0.47058823529411764" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
