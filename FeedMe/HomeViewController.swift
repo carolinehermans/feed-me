@@ -33,7 +33,8 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func filterList() { // should probably be called sort and not filter
-        items.sort() { $0 < $1 } // sort the fruit by name
+        self.items.sort() { $0 < $1 }
+        self.items = self.items.map({self.firstCharacterUppercaseString($0)})
         self.tableView.reloadData(); // notify the table view the data has changed
     }
     
