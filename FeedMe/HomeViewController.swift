@@ -22,7 +22,12 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if (FBSDKAccessToken.currentAccessToken() == nil) {
             self.displayModal()
         }
-        self.getLocalUser()
+        var user = User()
+        user.fbid = "654321"
+        user.name = "name"
+        var server = Server()
+        server.getAllFriends(user)
+        //self.getLocalUser()
     }
     
     func getLocalUser() -> Void {

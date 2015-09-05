@@ -11,4 +11,5 @@ import UIKit
 class User: NSObject {
     var name : NSString = "";
     var fbid : NSString = "";
+    var friends = [User]();
 }
