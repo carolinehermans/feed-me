@@ -33,7 +33,7 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         } else {
             // If you ask for multiple permissions at once, you
             // should check if specific permissions missing
-            if result.grantedPermissions.containsObject("email") {
+            if result.grantedPermissions.contains("email") {
                 // Do work
                 println("allowed email")
             }

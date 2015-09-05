@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     func displayPostLoginController() {
-        var VC1 = self.storyboard?.instantiateViewControllerWithIdentifier("HomeViewController") as HomeViewController
+        var VC1 = self.storyboard?.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
         let navController = UINavigationController(rootViewController: VC1) // Creating a navigation controller with VC1 at the root of the navigation stack.
         self.presentViewController(navController, animated:false, completion: nil)
     }
