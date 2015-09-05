@@ -32,7 +32,6 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     func displayModal() {
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("FacebookLoginViewController") as! FacebookLoginViewController
-        vc.view.backgroundColor = UIColor.whiteColor();
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
