@@ -27,9 +27,9 @@
                                 <color key="textColor" red="0.80392156862745101" green="0.47058823529411764" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" id="a17-tB-POE">
-                                <rect key="frame" x="70" y="84" width="181" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoo.png" id="a17-tB-POE">
+                                <rect key="frame" x="60" y="100" width="207" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.92941176470588238" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
@@ -200,7 +200,7 @@
                             </label>
                             <view contentMode="scaleToFill" id="K9n-y5-9HC">
                                 <rect key="frame" x="28" y="124" width="255" height="371"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -303,7 +303,7 @@
         <image name="foodicon.png" width="17" height="30"/>
         <image name="fruiticon.png" width="35" height="30"/>
         <image name="hearticon.png" width="30" height="30"/>
-        <image name="logo.png" width="256" height="136"/>
+        <image name="logoo.png" width="347" height="122"/>
         <image name="pointyrectangle.png" width="416" height="205"/>
         <image name="rectangle.png" width="339" height="424"/>
         <image name="tinyfeedme.png" width="67" height="36"/>

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -10,27 +11,27 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="UXv-AX-4nE">
-                    <rect key="frame" x="161" y="181" width="158" height="83"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="83" id="ZYm-cK-JVW"/>
-                        <constraint firstAttribute="width" constant="158" id="ry4-S9-ySd"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Created by woosufjordaline @ PennApps XII" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2J3-vV-0af">
                     <rect key="frame" x="72" y="439" width="337" height="21"/>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
                     <color key="textColor" red="0.82352941176470584" green="0.55294117647058827" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logoo.png" translatesAutoresizingMaskIntoConstraints="NO" id="hEo-nn-f2c">
+                    <rect key="frame" x="72" y="123" width="337" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hEo-nn-f2c" secondAttribute="height" multiplier="207:79" id="Goe-cs-hV3"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="2J3-vV-0af" secondAttribute="centerX" id="4WO-Kv-OX9"/>
                 <constraint firstAttribute="bottom" secondItem="2J3-vV-0af" secondAttribute="bottom" constant="13" id="8Ka-9u-fg7"/>
-                <constraint firstItem="UXv-AX-4nE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="119" id="L7N-0N-dGg"/>
-                <constraint firstAttribute="centerX" secondItem="UXv-AX-4nE" secondAttribute="centerX" id="mle-ZM-3gi"/>
-                <constraint firstItem="UXv-AX-4nE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="181" id="nn0-6b-rtV"/>
+                <constraint firstItem="hEo-nn-f2c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="123" id="Vqg-wZ-H0H"/>
+                <constraint firstItem="hEo-nn-f2c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="72" id="ed1-f5-lcn"/>
+                <constraint firstAttribute="centerX" secondItem="hEo-nn-f2c" secondAttribute="centerX" id="huU-Ra-OZV"/>
+                <constraint firstAttribute="trailing" secondItem="hEo-nn-f2c" secondAttribute="trailing" constant="71" id="wnz-s6-K59"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2J3-vV-0af" secondAttribute="bottom" constant="20" id="yTw-Qb-zot"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -39,6 +40,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo.png" width="256" height="136"/>
+        <image name="logoo.png" width="347" height="122"/>
     </resources>
 </document>
