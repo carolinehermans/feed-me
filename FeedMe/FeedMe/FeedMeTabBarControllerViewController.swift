@@ -16,8 +16,8 @@ class FeedMeTabBarControllerViewController: UITabBarController {
         UITabBar.appearance().barTintColor = UIColor.whiteColor()
         
         UITabBar.appearance().tintColor = UIColor(red: 205/255.0, green: 120/255.0, blue: 86/255.0, alpha: 255/255.0);
-        
-        
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red: 225/255.0, green: 174/255.0, blue: 153/255.0, alpha: 1.0)], forState: .Normal)
+    
         // Uses the original colors for your images, so they aren't not rendered as grey automatically.
         for item in self.tabBar.items as! [UITabBarItem] {
             if let image = item.image {
