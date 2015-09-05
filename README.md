@@ -1,7 +1,9 @@
-# feed-me
-PennApps XII
+#PennApps XII
 
 Yousuf Soliman
+
 Yeongwoo Hwang
+
 Jordan Brown
+
 Caroline Hermans
