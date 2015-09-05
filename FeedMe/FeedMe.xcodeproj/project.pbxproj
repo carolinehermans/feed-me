@@ -14,6 +14,12 @@
 		27B9FACF1B9A69DD00701AC6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B9FACE1B9A69DD00701AC6 /* Images.xcassets */; };
 		27B9FAD21B9A69DD00701AC6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B9FAD01B9A69DD00701AC6 /* LaunchScreen.xib */; };
 		27B9FADE1B9A69DD00701AC6 /* FeedMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FADD1B9A69DD00701AC6 /* FeedMeTests.swift */; };
+		27B9FAE81B9A6C7700701AC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FAE71B9A6C7700701AC6 /* HomeViewController.swift */; };
+		27B9FAEA1B9A6EBB00701AC6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAE91B9A6EBB00701AC6 /* FBSDKCoreKit.framework */; };
+		27B9FAEE1B9A6EC600701AC6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAEB1B9A6EC600701AC6 /* FBSDKLoginKit.framework */; };
+		27B9FAEF1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAEC1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework */; };
+		27B9FAF01B9A6EC600701AC6 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAED1B9A6EC600701AC6 /* FBSDKShareKit.framework */; };
+		27B9FAF31B9A70DA00701AC6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAF21B9A70DA00701AC6 /* Bolts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,13 @@
 		27B9FAD71B9A69DD00701AC6 /* FeedMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B9FADC1B9A69DD00701AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B9FADD1B9A69DD00701AC6 /* FeedMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMeTests.swift; sourceTree = "<group>"; };
+		27B9FAE71B9A6C7700701AC6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		27B9FAE91B9A6EBB00701AC6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		27B9FAEB1B9A6EC600701AC6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		27B9FAEC1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		27B9FAED1B9A6EC600701AC6 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		27B9FAF11B9A6F3200701AC6 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
+		27B9FAF21B9A70DA00701AC6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +58,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B9FAF31B9A70DA00701AC6 /* Bolts.framework in Frameworks */,
+				27B9FAF01B9A6EC600701AC6 /* FBSDKShareKit.framework in Frameworks */,
+				27B9FAEE1B9A6EC600701AC6 /* FBSDKLoginKit.framework in Frameworks */,
+				27B9FAEF1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework in Frameworks */,
+				27B9FAEA1B9A6EBB00701AC6 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +79,11 @@
 		27B9FAB61B9A69DD00701AC6 = {
 			isa = PBXGroup;
 			children = (
+				27B9FAF21B9A70DA00701AC6 /* Bolts.framework */,
+				27B9FAEB1B9A6EC600701AC6 /* FBSDKLoginKit.framework */,
+				27B9FAEC1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework */,
+				27B9FAED1B9A6EC600701AC6 /* FBSDKShareKit.framework */,
+				27B9FAE91B9A6EBB00701AC6 /* FBSDKCoreKit.framework */,
 				27B9FAC11B9A69DD00701AC6 /* FeedMe */,
 				27B9FADA1B9A69DD00701AC6 /* FeedMeTests */,
 				27B9FAC01B9A69DD00701AC6 /* Products */,
@@ -79,8 +102,10 @@
 		27B9FAC11B9A69DD00701AC6 /* FeedMe */ = {
 			isa = PBXGroup;
 			children = (
+				27B9FAF11B9A6F3200701AC6 /* Bridging-Header.h */,
 				27B9FAC41B9A69DD00701AC6 /* AppDelegate.swift */,
 				27B9FAC91B9A69DD00701AC6 /* ViewController.swift */,
+				27B9FAE71B9A6C7700701AC6 /* HomeViewController.swift */,
 				27B9FACB1B9A69DD00701AC6 /* Main.storyboard */,
 				27B9FACE1B9A69DD00701AC6 /* Images.xcassets */,
 				27B9FAD01B9A69DD00701AC6 /* LaunchScreen.xib */,
@@ -218,6 +243,7 @@
 				27B9FACA1B9A69DD00701AC6 /* ViewController.swift in Sources */,
 				27B9FAC51B9A69DD00701AC6 /* AppDelegate.swift in Sources */,
 				27B9FAC81B9A69DD00701AC6 /* FeedMe.xcdatamodeld in Sources */,
+				27B9FAE81B9A6C7700701AC6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +366,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FeedMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -350,9 +381,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FeedMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +445,7 @@
 				27B9FAE31B9A69DD00701AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27B9FAE41B9A69DD00701AC6 /* Build configuration list for PBXNativeTarget "FeedMeTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +454,7 @@
 				27B9FAE61B9A69DD00701AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
