@@ -178,8 +178,8 @@
         <!--My Recipes-->
         <scene sceneID="0JQ-pQ-2Ks">
             <objects>
-                <viewController id="pAD-A8-VGm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AgT-ps-Rz7">
+                <viewController id="pAD-A8-VGm" customClass="MyRecipesViewController" customModule="FeedMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AgT-ps-Rz7" customClass="MyRec">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -204,12 +204,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.73725490199999999" green="0.3294117647" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Recipes" image="foodicon.png" id="486-CL-JCo"/>
+                    <connections>
+                        <outlet property="textField" destination="Rft-7H-LY7" id="kux-QP-nRB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5V9-af-rt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
