@@ -8,14 +8,23 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     var foodImage : UIImage? = nil;
     var localUser : User = User();
     
+    @IBOutlet var textField : UITextField!
+    
+
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Handle the text field’s user input through delegate callbacks.
+        textField.delegate = self
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -86,6 +95,19 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.presentViewController(optionMenu, animated: true, completion: nil)
         */
     }
+    // MARK: UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+/*    func textFieldDidEndEditing(textField: UITextField) {
+        mealNameLabel.text = textField.text
+    }*/
 
     // MARK: - UIImagePickerControllerDelegate Methods
     

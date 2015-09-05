@@ -80,9 +80,10 @@
                                 <color key="textColor" red="0.73725490196078436" green="0.32941176470588235" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+ Add Ingredient" minimumFontSize="17" id="HC0-gH-xHJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="textField" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+ Add Ingredient" minimumFontSize="17" id="HC0-gH-xHJ" userLabel="textField">
                                 <rect key="frame" x="54" y="117" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="textField"/>
                                 <color key="textColor" red="0.80392156862745101" green="0.47058823529411764" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -97,6 +98,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Ingredients" image="fruiticon.png" id="Fsu-zS-AiN"/>
                     <navigationItem key="navigationItem" title="Home Page" id="cGN-zI-WBV"/>
+                    <connections>
+                        <outlet property="textField" destination="HC0-gH-xHJ" id="WrB-q0-cIa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sG-8I-SQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,8 +178,8 @@
         <!--My Recipes-->
         <scene sceneID="0JQ-pQ-2Ks">
             <objects>
-                <viewController id="pAD-A8-VGm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AgT-ps-Rz7">
+                <viewController id="pAD-A8-VGm" customClass="MyRecipesViewController" customModule="FeedMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AgT-ps-Rz7" customClass="MyRec">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -200,12 +204,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.73725490199999999" green="0.3294117647" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Recipes" image="foodicon.png" id="486-CL-JCo"/>
+                    <connections>
+                        <outlet property="textField" destination="Rft-7H-LY7" id="kux-QP-nRB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5V9-af-rt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -268,6 +275,7 @@
             </objects>
             <point key="canvasLocation" x="611" y="976"/>
         </scene>
+<<<<<<< HEAD
         <!--Table View Controller-->
         <scene sceneID="tsu-oG-0wH">
             <objects>
@@ -296,6 +304,8 @@
             </objects>
             <point key="canvasLocation" x="600" y="341"/>
         </scene>
+=======
+>>>>>>> 44585a14cf0feafd6c7e190fb862074c2039a89a
     </scenes>
     <resources>
         <image name="camicon.png" width="53" height="53"/>

@@ -39,6 +39,7 @@
 		D92925FC1B9B12D000786598 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925FB1B9B12D000786598 /* logo.png */; };
 		D92925FE1B9B276000786598 /* pointyrectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925FD1B9B276000786598 /* pointyrectangle.png */; };
 		D92926001B9B296100786598 /* upsidedownpointyrectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925FF1B9B296100786598 /* upsidedownpointyrectangle.png */; };
+		D92926021B9B3F2200786598 /* MyRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92926011B9B3F2200786598 /* MyRecipesViewController.swift */; };
 		D99E371B1B9AEA7A0091C09A /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */; };
 		D99E371D1B9AF0310091C09A /* camicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D99E371C1B9AF0300091C09A /* camicon.png */; };
 		D99E371F1B9AF1070091C09A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */; };
@@ -93,6 +94,7 @@
 		D92925FB1B9B12D000786598 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		D92925FD1B9B276000786598 /* pointyrectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointyrectangle.png; sourceTree = "<group>"; };
 		D92925FF1B9B296100786598 /* upsidedownpointyrectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upsidedownpointyrectangle.png; sourceTree = "<group>"; };
+		D92926011B9B3F2200786598 /* MyRecipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRecipesViewController.swift; sourceTree = "<group>"; };
 		D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PatrickHand-Regular.ttf"; sourceTree = "<group>"; };
 		D99E371C1B9AF0300091C09A /* camicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camicon.png; sourceTree = "<group>"; };
 		D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				D9CEE4901B9A8F790010E71D /* FacebookLoginViewController.swift */,
 				27B934F61B9AB1D3004CDCB7 /* ImageProcessingViewController.swift */,
 				27B9FACB1B9A69DD00701AC6 /* Main.storyboard */,
+				D92926011B9B3F2200786598 /* MyRecipesViewController.swift */,
 				27A64B7A1B9B0500002E90F8 /* Server.swift */,
 				27A64B761B9AFE6C002E90F8 /* NoIngredientsView */,
 				27A64B781B9AFE8E002E90F8 /* RecipeView */,
@@ -364,6 +367,7 @@
 				27ADFFE11B9B3E73005691CA /* CapturePhotoViewController.swift in Sources */,
 				27B9FAC81B9A69DD00701AC6 /* FeedMe.xcdatamodeld in Sources */,
 				27A64B7B1B9B0500002E90F8 /* Server.swift in Sources */,
+				D92926021B9B3F2200786598 /* MyRecipesViewController.swift in Sources */,
 				27A64B6F1B9AFDC6002E90F8 /* NoIngredientsView.swift in Sources */,
 				27A64B7D1B9B054A002E90F8 /* User.swift in Sources */,
 				27B934F71B9AB1D3004CDCB7 /* ImageProcessingViewController.swift in Sources */,
