@@ -9,7 +9,32 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NoIngredientsView" customModule="FeedMe" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="rectangle.png" translatesAutoresizingMaskIntoConstraints="NO" id="BWF-TE-0x2">
+                    <rect key="frame" x="-6" y="0.0" width="606" height="605"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It looks like you don't have any ingredients saved." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZ4-LP-CTl">
+                    <rect key="frame" x="8" y="159" width="584" height="110"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                    <color key="textColor" red="0.73725490199999999" green="0.3294117647" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="BWF-TE-0x2" firstAttribute="centerX" secondItem="TZ4-LP-CTl" secondAttribute="centerX" constant="4.5" id="jWb-p6-QhO"/>
+            </constraints>
+            <point key="canvasLocation" x="236" y="297"/>
         </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WBA-77-T2y">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <nil key="highlightedColor"/>
+        </label>
     </objects>
+    <resources>
+        <image name="rectangle.png" width="339" height="424"/>
+    </resources>
 </document>
