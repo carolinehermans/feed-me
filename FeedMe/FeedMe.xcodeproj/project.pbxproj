@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		274ED2D21B9A827000B279AC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274ED2D11B9A827000B279AC /* HomeViewController.swift */; };
+		27B934F21B9AA8A7004CDCB7 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B934F11B9AA8A7004CDCB7 /* Food.swift */; };
+		27B934F51B9AAA2D004CDCB7 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B934F41B9AAA2D004CDCB7 /* Recipe.swift */; };
 		27B9FAC51B9A69DD00701AC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FAC41B9A69DD00701AC6 /* AppDelegate.swift */; };
 		27B9FAC81B9A69DD00701AC6 /* FeedMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FAC61B9A69DD00701AC6 /* FeedMe.xcdatamodeld */; };
 		27B9FACA1B9A69DD00701AC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FAC91B9A69DD00701AC6 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		274ED2D11B9A827000B279AC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
+		27B934F11B9AA8A7004CDCB7 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		27B934F41B9AAA2D004CDCB7 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		27B9FABF1B9A69DD00701AC6 /* FeedMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B9FAC31B9A69DD00701AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B9FAC41B9A69DD00701AC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27B934F31B9AA8AC004CDCB7 /* Food/Recipe Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				27B934F11B9AA8A7004CDCB7 /* Food.swift */,
+				27B934F41B9AAA2D004CDCB7 /* Recipe.swift */,
+			);
+			name = "Food/Recipe Data Structures";
+			sourceTree = "<group>";
+		};
 		27B9FAB61B9A69DD00701AC6 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +117,7 @@
 		27B9FAC11B9A69DD00701AC6 /* FeedMe */ = {
 			isa = PBXGroup;
 			children = (
+				27B934F31B9AA8AC004CDCB7 /* Food/Recipe Data Structures */,
 				274ED2D11B9A827000B279AC /* HomeViewController.swift */,
 				27B9FAF11B9A6F3200701AC6 /* Bridging-Header.h */,
 				27B9FAC41B9A69DD00701AC6 /* AppDelegate.swift */,
@@ -245,9 +259,11 @@
 			files = (
 				27B9FACA1B9A69DD00701AC6 /* ViewController.swift in Sources */,
 				27B9FAC51B9A69DD00701AC6 /* AppDelegate.swift in Sources */,
+				27B934F51B9AAA2D004CDCB7 /* Recipe.swift in Sources */,
 				D9CEE4911B9A8F790010E71D /* FacebookLoginViewController.swift in Sources */,
 				27B9FAC81B9A69DD00701AC6 /* FeedMe.xcdatamodeld in Sources */,
 				274ED2D21B9A827000B279AC /* HomeViewController.swift in Sources */,
+				27B934F21B9AA8A7004CDCB7 /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
