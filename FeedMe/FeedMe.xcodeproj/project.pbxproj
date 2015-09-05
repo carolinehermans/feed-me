@@ -25,7 +25,6 @@
 		27B9FAC51B9A69DD00701AC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FAC41B9A69DD00701AC6 /* AppDelegate.swift */; };
 		27B9FAC81B9A69DD00701AC6 /* FeedMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FAC61B9A69DD00701AC6 /* FeedMe.xcdatamodeld */; };
 		27B9FACD1B9A69DD00701AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B9FACB1B9A69DD00701AC6 /* Main.storyboard */; };
-		27B9FACF1B9A69DD00701AC6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B9FACE1B9A69DD00701AC6 /* Images.xcassets */; };
 		27B9FAD21B9A69DD00701AC6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B9FAD01B9A69DD00701AC6 /* LaunchScreen.xib */; };
 		27B9FADE1B9A69DD00701AC6 /* FeedMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9FADD1B9A69DD00701AC6 /* FeedMeTests.swift */; };
 		27B9FAEA1B9A6EBB00701AC6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAE91B9A6EBB00701AC6 /* FBSDKCoreKit.framework */; };
@@ -40,6 +39,9 @@
 		D92925FE1B9B276000786598 /* pointyrectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925FD1B9B276000786598 /* pointyrectangle.png */; };
 		D92926001B9B296100786598 /* upsidedownpointyrectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925FF1B9B296100786598 /* upsidedownpointyrectangle.png */; };
 		D92926021B9B3F2200786598 /* MyRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92926011B9B3F2200786598 /* MyRecipesViewController.swift */; };
+		D92926041B9B4FFE00786598 /* cameraiconn.png in Resources */ = {isa = PBXBuildFile; fileRef = D92926031B9B4FFE00786598 /* cameraiconn.png */; };
+		D92926061B9B517400786598 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = D92926051B9B517400786598 /* launch.png */; };
+		D929260F1B9B691500786598 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D929260D1B9B652C00786598 /* Images.xcassets */; };
 		D99E371B1B9AEA7A0091C09A /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */; };
 		D99E371D1B9AF0310091C09A /* camicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D99E371C1B9AF0300091C09A /* camicon.png */; };
 		D99E371F1B9AF1070091C09A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */; };
@@ -77,7 +79,6 @@
 		27B9FAC41B9A69DD00701AC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B9FAC71B9A69DD00701AC6 /* FeedMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedMe.xcdatamodel; sourceTree = "<group>"; };
 		27B9FACC1B9A69DD00701AC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		27B9FACE1B9A69DD00701AC6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27B9FAD11B9A69DD00701AC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		27B9FAD71B9A69DD00701AC6 /* FeedMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B9FADC1B9A69DD00701AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +96,9 @@
 		D92925FD1B9B276000786598 /* pointyrectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointyrectangle.png; sourceTree = "<group>"; };
 		D92925FF1B9B296100786598 /* upsidedownpointyrectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upsidedownpointyrectangle.png; sourceTree = "<group>"; };
 		D92926011B9B3F2200786598 /* MyRecipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRecipesViewController.swift; sourceTree = "<group>"; };
+		D92926031B9B4FFE00786598 /* cameraiconn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraiconn.png; sourceTree = "<group>"; };
+		D92926051B9B517400786598 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		D929260D1B9B652C00786598 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PatrickHand-Regular.ttf"; sourceTree = "<group>"; };
 		D99E371C1B9AF0300091C09A /* camicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camicon.png; sourceTree = "<group>"; };
 		D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -149,8 +153,10 @@
 				D92925FB1B9B12D000786598 /* logo.png */,
 				D92925F91B9B11AF00786598 /* fruiticon.png */,
 				D92925FF1B9B296100786598 /* upsidedownpointyrectangle.png */,
+				D92926051B9B517400786598 /* launch.png */,
 				D92925F71B9B117100786598 /* foodicon.png */,
 				D92925F51B9B116A00786598 /* hearticon.png */,
+				D92926031B9B4FFE00786598 /* cameraiconn.png */,
 				D99E371C1B9AF0300091C09A /* camicon.png */,
 				D92925FD1B9B276000786598 /* pointyrectangle.png */,
 				27A64B6A1B9AF8C5002E90F8 /* rectangle.png */,
@@ -210,8 +216,8 @@
 				27A64B761B9AFE6C002E90F8 /* NoIngredientsView */,
 				27A64B781B9AFE8E002E90F8 /* RecipeView */,
 				27A64B791B9AFEA0002E90F8 /* images */,
-				27B9FACE1B9A69DD00701AC6 /* Images.xcassets */,
 				27B9FAD01B9A69DD00701AC6 /* LaunchScreen.xib */,
+				D929260D1B9B652C00786598 /* Images.xcassets */,
 				27B9FAC61B9A69DD00701AC6 /* FeedMe.xcdatamodeld */,
 				27B9FAC21B9A69DD00701AC6 /* Supporting Files */,
 				D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */,
@@ -329,16 +335,18 @@
 				D99E371B1B9AEA7A0091C09A /* PatrickHand-Regular.ttf in Resources */,
 				27B9FACD1B9A69DD00701AC6 /* Main.storyboard in Resources */,
 				27A64B751B9AFE1C002E90F8 /* RecipeView.xib in Resources */,
+				D92926041B9B4FFE00786598 /* cameraiconn.png in Resources */,
 				D99E371F1B9AF1070091C09A /* Montserrat-Bold.ttf in Resources */,
 				D92925FC1B9B12D000786598 /* logo.png in Resources */,
 				D92925FA1B9B11AF00786598 /* fruiticon.png in Resources */,
 				27A64B6D1B9AF8C5002E90F8 /* tinyfeedme.png in Resources */,
 				D92925F61B9B116A00786598 /* hearticon.png in Resources */,
+				D929260F1B9B691500786598 /* Images.xcassets in Resources */,
 				27B9FAD21B9A69DD00701AC6 /* LaunchScreen.xib in Resources */,
 				27A64B711B9AFDE3002E90F8 /* NoIngredientsView.xib in Resources */,
 				D92926001B9B296100786598 /* upsidedownpointyrectangle.png in Resources */,
+				D92926061B9B517400786598 /* launch.png in Resources */,
 				D92925F81B9B117100786598 /* foodicon.png in Resources */,
-				27B9FACF1B9A69DD00701AC6 /* Images.xcassets in Resources */,
 				27A64B6C1B9AF8C5002E90F8 /* rectangle.png in Resources */,
 				D92925FE1B9B276000786598 /* pointyrectangle.png in Resources */,
 				D99E371D1B9AF0310091C09A /* camicon.png in Resources */,

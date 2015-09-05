@@ -47,6 +47,8 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UILaunchImageFile</key>
+	<string>launch.png</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>PatrickHand-Regular.ttf</string>
