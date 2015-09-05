@@ -32,6 +32,7 @@
 		27B9FAEF1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAEC1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework */; };
 		27B9FAF01B9A6EC600701AC6 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAED1B9A6EC600701AC6 /* FBSDKShareKit.framework */; };
 		27B9FAF31B9A70DA00701AC6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAF21B9A70DA00701AC6 /* Bolts.framework */; };
+		CBB76EBD1B9B9E55007316B6 /* FoodComHTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB76EBC1B9B9E55007316B6 /* FoodComHTMLParser.swift */; };
 		D92925F61B9B116A00786598 /* hearticon.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925F51B9B116A00786598 /* hearticon.png */; };
 		D92925F81B9B117100786598 /* foodicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925F71B9B117100786598 /* foodicon.png */; };
 		D92925FA1B9B11AF00786598 /* fruiticon.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925F91B9B11AF00786598 /* fruiticon.png */; };
@@ -90,6 +91,7 @@
 		27B9FAED1B9A6EC600701AC6 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		27B9FAF11B9A6F3200701AC6 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
 		27B9FAF21B9A70DA00701AC6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		CBB76EBC1B9B9E55007316B6 /* FoodComHTMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodComHTMLParser.swift; sourceTree = "<group>"; };
 		D92925F51B9B116A00786598 /* hearticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hearticon.png; sourceTree = "<group>"; };
 		D92925F71B9B117100786598 /* foodicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodicon.png; sourceTree = "<group>"; };
 		D92925F91B9B11AF00786598 /* fruiticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fruiticon.png; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				27B9FAC61B9A69DD00701AC6 /* FeedMe.xcdatamodeld */,
 				27B9FAC21B9A69DD00701AC6 /* Supporting Files */,
 				D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */,
+				CBB76EBC1B9B9E55007316B6 /* FoodComHTMLParser.swift */,
 			);
 			path = FeedMe;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB76EBD1B9B9E55007316B6 /* FoodComHTMLParser.swift in Sources */,
 				27B9FAC51B9A69DD00701AC6 /* AppDelegate.swift in Sources */,
 				27B934F51B9AAA2D004CDCB7 /* Recipe.swift in Sources */,
 				27A64B691B9AF71D002E90F8 /* FeedMeTabBarControllerViewController.swift in Sources */,

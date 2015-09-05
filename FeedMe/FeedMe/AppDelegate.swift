@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        var italianRice = FoodComHTMLParser(url: "http://www.food.com/recipe/italian-style-rice-and-beans-125463")
+        italianRice.getRecipeJSON(italianRice.html)
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
