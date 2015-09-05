@@ -84,10 +84,15 @@
                                 <color key="textColor" red="0.73725490196078436" green="0.32941176470588235" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="y2p-2d-Meo">
+                                <rect key="frame" x="80" y="156" width="160" height="237"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Fridge" image="camicon.png" id="Fsu-zS-AiN"/>
+                    <tabBarItem key="tabBarItem" title="My Foods" image="camicon.png" id="Fsu-zS-AiN"/>
                     <navigationItem key="navigationItem" title="Home Page" id="cGN-zI-WBV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sG-8I-SQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -127,31 +132,51 @@
             </objects>
             <point key="canvasLocation" x="1369" y="975"/>
         </scene>
-        <!--Cook-->
+        <!--My Recipes-->
         <scene sceneID="0JQ-pQ-2Ks">
             <objects>
                 <viewController id="pAD-A8-VGm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AgT-ps-Rz7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search for Recipes" borderStyle="roundedRect" minimumFontSize="17" id="Rft-7H-LY7">
+                                <rect key="frame" x="88" y="55" width="144" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" id="K9n-y5-9HC">
+                                <rect key="frame" x="16" y="93" width="288" height="381"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cook" id="486-CL-JCo"/>
+                    <tabBarItem key="tabBarItem" title="My Recipes" id="486-CL-JCo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5V9-af-rt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="611" y="1657"/>
         </scene>
-        <!--Favorite Recipes-->
+        <!--My Favorites-->
         <scene sceneID="lU9-iz-Vrp">
             <objects>
                 <viewController id="VUz-0E-N8d" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GrH-Eh-3vg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2wV-oW-KX2">
+                                <rect key="frame" x="0.0" y="35" width="320" height="442"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorite Recipes" id="g1e-pe-aNy"/>
+                    <tabBarItem key="tabBarItem" title="My Favorites" id="g1e-pe-aNy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zw7-et-J50" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

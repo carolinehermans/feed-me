@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		274ED2D21B9A827000B279AC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274ED2D11B9A827000B279AC /* HomeViewController.swift */; };
 		27A64B691B9AF71D002E90F8 /* FeedMeTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64B681B9AF71D002E90F8 /* FeedMeTabBarControllerViewController.swift */; };
+		27A64B6C1B9AF8C5002E90F8 /* rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A64B6A1B9AF8C5002E90F8 /* rectangle.png */; };
+		27A64B6D1B9AF8C5002E90F8 /* tinyfeedme.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A64B6B1B9AF8C5002E90F8 /* tinyfeedme.png */; };
+		27A64B6F1B9AFDC6002E90F8 /* NoIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64B6E1B9AFDC6002E90F8 /* NoIngredientsView.swift */; };
+		27A64B711B9AFDE3002E90F8 /* NoIngredientsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A64B701B9AFDE3002E90F8 /* NoIngredientsView.xib */; };
+		27A64B731B9AFE0E002E90F8 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64B721B9AFE0E002E90F8 /* RecipeView.swift */; };
+		27A64B751B9AFE1C002E90F8 /* RecipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A64B741B9AFE1C002E90F8 /* RecipeView.xib */; };
+		27A64B7B1B9B0500002E90F8 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64B7A1B9B0500002E90F8 /* Server.swift */; };
+		27A64B7D1B9B054A002E90F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64B7C1B9B054A002E90F8 /* User.swift */; };
 		27B934F21B9AA8A7004CDCB7 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B934F11B9AA8A7004CDCB7 /* Food.swift */; };
 		27B934F51B9AAA2D004CDCB7 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B934F41B9AAA2D004CDCB7 /* Recipe.swift */; };
 		27B934F71B9AB1D3004CDCB7 /* ImageProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B934F61B9AB1D3004CDCB7 /* ImageProcessingViewController.swift */; };
@@ -42,6 +50,14 @@
 /* Begin PBXFileReference section */
 		274ED2D11B9A827000B279AC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
 		27A64B681B9AF71D002E90F8 /* FeedMeTabBarControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedMeTabBarControllerViewController.swift; sourceTree = "<group>"; };
+		27A64B6A1B9AF8C5002E90F8 /* rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rectangle.png; sourceTree = "<group>"; };
+		27A64B6B1B9AF8C5002E90F8 /* tinyfeedme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tinyfeedme.png; sourceTree = "<group>"; };
+		27A64B6E1B9AFDC6002E90F8 /* NoIngredientsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoIngredientsView.swift; sourceTree = "<group>"; };
+		27A64B701B9AFDE3002E90F8 /* NoIngredientsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoIngredientsView.xib; sourceTree = "<group>"; };
+		27A64B721B9AFE0E002E90F8 /* RecipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		27A64B741B9AFE1C002E90F8 /* RecipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeView.xib; sourceTree = "<group>"; };
+		27A64B7A1B9B0500002E90F8 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		27A64B7C1B9B054A002E90F8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		27B934F11B9AA8A7004CDCB7 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		27B934F41B9AAA2D004CDCB7 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		27B934F61B9AB1D3004CDCB7 /* ImageProcessingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessingViewController.swift; sourceTree = "<group>"; };
@@ -90,13 +106,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27B934F31B9AA8AC004CDCB7 /* Food/Recipe Data Structures */ = {
+		27A64B761B9AFE6C002E90F8 /* NoIngredientsView */ = {
+			isa = PBXGroup;
+			children = (
+				27A64B6E1B9AFDC6002E90F8 /* NoIngredientsView.swift */,
+				27A64B701B9AFDE3002E90F8 /* NoIngredientsView.xib */,
+			);
+			name = NoIngredientsView;
+			sourceTree = "<group>";
+		};
+		27A64B781B9AFE8E002E90F8 /* RecipeView */ = {
+			isa = PBXGroup;
+			children = (
+				27A64B721B9AFE0E002E90F8 /* RecipeView.swift */,
+				27A64B741B9AFE1C002E90F8 /* RecipeView.xib */,
+			);
+			name = RecipeView;
+			sourceTree = "<group>";
+		};
+		27A64B791B9AFEA0002E90F8 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D99E371C1B9AF0300091C09A /* camicon.png */,
+				27A64B6A1B9AF8C5002E90F8 /* rectangle.png */,
+				27A64B6B1B9AF8C5002E90F8 /* tinyfeedme.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		27B934F31B9AA8AC004CDCB7 /* FeedMe Data Structures */ = {
 			isa = PBXGroup;
 			children = (
 				27B934F11B9AA8A7004CDCB7 /* Food.swift */,
 				27B934F41B9AAA2D004CDCB7 /* Recipe.swift */,
+				27A64B7C1B9B054A002E90F8 /* User.swift */,
 			);
-			name = "Food/Recipe Data Structures";
+			name = "FeedMe Data Structures";
 			sourceTree = "<group>";
 		};
 		27B9FAB61B9A69DD00701AC6 = {
@@ -128,17 +173,20 @@
 				27B9FAF11B9A6F3200701AC6 /* Bridging-Header.h */,
 				27B9FAC41B9A69DD00701AC6 /* AppDelegate.swift */,
 				27A64B681B9AF71D002E90F8 /* FeedMeTabBarControllerViewController.swift */,
-				27B934F31B9AA8AC004CDCB7 /* Food/Recipe Data Structures */,
+				27B934F31B9AA8AC004CDCB7 /* FeedMe Data Structures */,
 				274ED2D11B9A827000B279AC /* HomeViewController.swift */,
 				D9CEE4901B9A8F790010E71D /* FacebookLoginViewController.swift */,
 				27B934F61B9AB1D3004CDCB7 /* ImageProcessingViewController.swift */,
 				27B9FACB1B9A69DD00701AC6 /* Main.storyboard */,
+				27A64B7A1B9B0500002E90F8 /* Server.swift */,
+				27A64B761B9AFE6C002E90F8 /* NoIngredientsView */,
+				27A64B781B9AFE8E002E90F8 /* RecipeView */,
+				27A64B791B9AFEA0002E90F8 /* images */,
 				27B9FACE1B9A69DD00701AC6 /* Images.xcassets */,
 				27B9FAD01B9A69DD00701AC6 /* LaunchScreen.xib */,
 				27B9FAC61B9A69DD00701AC6 /* FeedMe.xcdatamodeld */,
 				27B9FAC21B9A69DD00701AC6 /* Supporting Files */,
 				D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */,
-				D99E371C1B9AF0300091C09A /* camicon.png */,
 			);
 			path = FeedMe;
 			sourceTree = "<group>";
@@ -252,9 +300,13 @@
 			files = (
 				D99E371B1B9AEA7A0091C09A /* PatrickHand-Regular.ttf in Resources */,
 				27B9FACD1B9A69DD00701AC6 /* Main.storyboard in Resources */,
+				27A64B751B9AFE1C002E90F8 /* RecipeView.xib in Resources */,
 				D99E371F1B9AF1070091C09A /* Montserrat-Bold.ttf in Resources */,
+				27A64B6D1B9AF8C5002E90F8 /* tinyfeedme.png in Resources */,
 				27B9FAD21B9A69DD00701AC6 /* LaunchScreen.xib in Resources */,
+				27A64B711B9AFDE3002E90F8 /* NoIngredientsView.xib in Resources */,
 				27B9FACF1B9A69DD00701AC6 /* Images.xcassets in Resources */,
+				27A64B6C1B9AF8C5002E90F8 /* rectangle.png in Resources */,
 				D99E371D1B9AF0310091C09A /* camicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +329,11 @@
 				27B934F51B9AAA2D004CDCB7 /* Recipe.swift in Sources */,
 				27A64B691B9AF71D002E90F8 /* FeedMeTabBarControllerViewController.swift in Sources */,
 				D9CEE4911B9A8F790010E71D /* FacebookLoginViewController.swift in Sources */,
+				27A64B731B9AFE0E002E90F8 /* RecipeView.swift in Sources */,
 				27B9FAC81B9A69DD00701AC6 /* FeedMe.xcdatamodeld in Sources */,
+				27A64B7B1B9B0500002E90F8 /* Server.swift in Sources */,
+				27A64B6F1B9AFDC6002E90F8 /* NoIngredientsView.swift in Sources */,
+				27A64B7D1B9B054A002E90F8 /* User.swift in Sources */,
 				27B934F71B9AB1D3004CDCB7 /* ImageProcessingViewController.swift in Sources */,
 				274ED2D21B9A827000B279AC /* HomeViewController.swift in Sources */,
 				27B934F21B9AA8A7004CDCB7 /* Food.swift in Sources */,

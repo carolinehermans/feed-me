@@ -23,6 +23,8 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if (FBSDKAccessToken.currentAccessToken() == nil) {
             self.displayModal();
         }
+        var server = Server();
+        server.doesUserExist(User());
     }
 
     override func didReceiveMemoryWarning() {
