@@ -80,9 +80,10 @@
                                 <color key="textColor" red="0.73725490196078436" green="0.32941176470588235" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+ Add Ingredient" minimumFontSize="17" id="HC0-gH-xHJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="textField" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+ Add Ingredient" minimumFontSize="17" id="HC0-gH-xHJ" userLabel="textField">
                                 <rect key="frame" x="54" y="117" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="textField"/>
                                 <color key="textColor" red="0.80392156862745101" green="0.47058823529411764" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -97,6 +98,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Ingredients" image="fruiticon.png" id="Fsu-zS-AiN"/>
                     <navigationItem key="navigationItem" title="Home Page" id="cGN-zI-WBV"/>
+                    <connections>
+                        <outlet property="textField" destination="HC0-gH-xHJ" id="WrB-q0-cIa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sG-8I-SQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,33 +271,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOS-lf-Vz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="611" y="976"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="tsu-oG-0wH">
-            <objects>
-                <tableViewController id="xQP-9f-Gce" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9Cj-yR-iaG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Mge-GK-fEd">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mge-GK-fEd" id="pE7-46-CUx">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="xQP-9f-Gce" id="aaX-IY-TcI"/>
-                            <outlet property="delegate" destination="xQP-9f-Gce" id="HBM-lQ-uM1"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TbY-PA-vEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
