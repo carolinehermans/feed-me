@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FVJ-XZ-3xE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FVJ-XZ-3xE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Facebook Auth-->
@@ -72,6 +72,9 @@ your kitchen </string>
                                 <state key="normal" title="Add From Photo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="showActionSheet:" destination="88g-Q3-vPQ" eventType="touchUpInside" id="T25-sC-Cp4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,7 +89,6 @@ your kitchen </string>
         <!--Cook-->
         <scene sceneID="0JQ-pQ-2Ks">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5V9-af-rt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="pAD-A8-VGm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AgT-ps-Rz7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -95,6 +97,7 @@ your kitchen </string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cook" id="486-CL-JCo"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5V9-af-rt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="611" y="1657"/>
         </scene>

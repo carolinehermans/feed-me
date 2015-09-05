@@ -8,8 +8,10 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    var foodImage : UIImage? = nil;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +34,48 @@ class HomeViewController: UIViewController {
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("FacebookLoginViewController") as! FacebookLoginViewController
         vc.view.backgroundColor = UIColor.whiteColor();
         self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func showActionSheet(sender: AnyObject) {
+        
+        let imagePicker = UIImagePickerController()
+        
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        
+        let optionMenu = UIAlertController(title: "Add Food", message: nil, preferredStyle: .ActionSheet)
+        
+        let fromCamera = UIAlertAction(title: "From Camera", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        })
+        let fromPhotoRoll = UIAlertAction(title: "From Photo Library", style: .Default, handler: {
+           (alert: UIAlertAction!) -> Void in
+            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        })
+        
+        optionMenu.addAction(fromCamera)
+        optionMenu.addAction(fromPhotoRoll)
+
+        self.presentViewController(optionMenu, animated: true, completion: nil)
+    }
+
+    // MARK: - UIImagePickerControllerDelegate Methods
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            foodImage = pickedImage;
+        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     /*
