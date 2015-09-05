@@ -107,12 +107,16 @@ class Server: NSObject {
     }
     
     func whoHasIngredient(ingredient: String) -> [String] {
-        let urlString = domain + "?action=who_has_ingredient&ingredient=" + ingredient
+        let urlString = domain + "?action=who_has_ingredient&ingredient=" + ingredient.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         let url = NSURL(string: urlString)
         var data = NSData(contentsOfURL: url!)
         if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
             if let val = json["val"] as? NSArray {
-                return []
+                var names = [String]()
+                for id in val {
+                    names.append(self.getNameForID(id as! String))
+                }
+                return names
             }
         }
         return []
