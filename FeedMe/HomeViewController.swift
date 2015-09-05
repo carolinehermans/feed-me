@@ -12,7 +12,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var foodImage : UIImage? = nil;
     var localUser : User = User();
-    var items: [String] = ["Milk", "Eggs", "Cheese"]
+    var items: [String] = []
     var bgColor = UIColor(red: 253/255.0, green: 251/255.0, blue: 243/255.0, alpha: 255/255.0)
     
     @IBOutlet var textField : UITextField!
@@ -66,6 +66,8 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 } else {
                     println("user exists")
                 }
+                self.items = server.getAllIngredients(self.localUser)
+                self.filterList()
             }
         })
     }
@@ -117,6 +119,10 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         // Hide the keyboard.
         items.append(self.firstCharacterUppercaseString(textField.text))
+        if (textField.text != "") {
+            var server = Server()
+            server.submitIngredients(localUser, ingredients: [textField.text])
+        }
         textField.text = ""
         textField.resignFirstResponder()
         self.filterList()
@@ -184,6 +190,8 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            var server = Server()
+            server.deleteIngredient(self.localUser, ingredient: items[indexPath.row])
             items.removeAtIndex(indexPath.row)
             self.tableView.reloadData()
             self.tableView.editing = false

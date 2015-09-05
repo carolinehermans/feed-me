@@ -122,4 +122,29 @@ class Server: NSObject {
         return []
     }
     
+    func getAllIngredients(user: User) -> [String] {
+        let urlString = domain + "?action=get_all_ingredients&f_id=" + (user.fbid as String)
+        let url = NSURL(string: urlString)
+        var data = NSData(contentsOfURL: url!)
+        if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
+            if let val = json["val"] as? NSArray {
+                return val as! [String]
+            }
+        }
+        return []
+    }
+    
+    func deleteIngredient(user: User, ingredient: String) -> Bool {
+        let urlString = domain + "?action=delete_ingredient&ingredient=" + ingredient.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)! + "&f_id=" + (user.fbid as String)
+
+        let url = NSURL(string: urlString)
+        var data = NSData(contentsOfURL: url!)
+        if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
+            if let val = json["val"] as? NSNumber {
+                return val.integerValue > 0
+            }
+        }
+        return false
+    }
+    
 }
