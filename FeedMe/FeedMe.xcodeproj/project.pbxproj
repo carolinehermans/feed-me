@@ -23,6 +23,8 @@
 		27B9FAF01B9A6EC600701AC6 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAED1B9A6EC600701AC6 /* FBSDKShareKit.framework */; };
 		27B9FAF31B9A70DA00701AC6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAF21B9A70DA00701AC6 /* Bolts.framework */; };
 		D99E371B1B9AEA7A0091C09A /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */; };
+		D99E371D1B9AF0310091C09A /* camicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D99E371C1B9AF0300091C09A /* camicon.png */; };
+		D99E371F1B9AF1070091C09A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */; };
 		D9CEE4911B9A8F790010E71D /* FacebookLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CEE4901B9A8F790010E71D /* FacebookLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		27B9FAF11B9A6F3200701AC6 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
 		27B9FAF21B9A70DA00701AC6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PatrickHand-Regular.ttf"; sourceTree = "<group>"; };
+		D99E371C1B9AF0300091C09A /* camicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camicon.png; sourceTree = "<group>"; };
+		D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		D9CEE4901B9A8F790010E71D /* FacebookLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +135,7 @@
 				27B9FAC61B9A69DD00701AC6 /* FeedMe.xcdatamodeld */,
 				27B9FAC21B9A69DD00701AC6 /* Supporting Files */,
 				D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */,
+				D99E371C1B9AF0300091C09A /* camicon.png */,
 			);
 			path = FeedMe;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				27B9FAC31B9A69DD00701AC6 /* Info.plist */,
+				D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -243,8 +249,10 @@
 			files = (
 				D99E371B1B9AEA7A0091C09A /* PatrickHand-Regular.ttf in Resources */,
 				27B9FACD1B9A69DD00701AC6 /* Main.storyboard in Resources */,
+				D99E371F1B9AF1070091C09A /* Montserrat-Bold.ttf in Resources */,
 				27B9FAD21B9A69DD00701AC6 /* LaunchScreen.xib in Resources */,
 				27B9FACF1B9A69DD00701AC6 /* Images.xcassets in Resources */,
+				D99E371D1B9AF0310091C09A /* camicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
