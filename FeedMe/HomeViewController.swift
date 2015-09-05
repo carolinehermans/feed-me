@@ -26,10 +26,15 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         // Handle the text field’s user input through delegate callbacks.
         textField.delegate = self
-        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.backgroundColor = bgColor
+    }
+    
+    func filterList() { // should probably be called sort and not filter
+        items.sort() { $0 < $1 } // sort the fruit by name
+        self.tableView.reloadData(); // notify the table view the data has changed
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -100,13 +105,24 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.presentViewController(optionMenu, animated: true, completion: nil)
         */
     }
+    
+    func firstCharacterUppercaseString(string: String) -> String {
+        var str = string as NSString
+        let firstUppercaseCharacter = str.substringToIndex(1).uppercaseString
+        let firstUppercaseCharacterString = str.stringByReplacingCharactersInRange(NSMakeRange(0, 1), withString: firstUppercaseCharacter)
+        return firstUppercaseCharacterString
+    }
+    
     // MARK: UITextFieldDelegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         // Hide the keyboard.
+        items.append(self.firstCharacterUppercaseString(textField.text))
+        textField.text = ""
         textField.resignFirstResponder()
+        self.filterList()
         return true
     }
-    func DismissKeyboard(){
+    func dismissKeyboard(){
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
@@ -157,7 +173,8 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         cell.textLabel?.text = self.items[indexPath.row]
         cell.backgroundColor = bgColor
-        
+        cell.textLabel?.font = UIFont(name: "GillSans", size: 20)
+        cell.textLabel?.textColor = UIColor(red: 216/255.0, green: 140/255.0, blue: 105/255.0, alpha: 1.0)
         return cell
     }
     
