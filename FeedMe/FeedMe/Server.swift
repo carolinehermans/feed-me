@@ -20,20 +20,22 @@ class Server: NSObject {
         var data = NSData(contentsOfURL: url!)
         if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
             if let val = json["val"] as? NSNumber {
-                println(val.integerValue > 0)
                 return val.integerValue > 0
             }
         }
         return false;
     }
     
-    func createUser(name: NSString, fbid: NSString) -> Bool {
-        let url = NSURL(string: domain + "?action=create_user&f_id=" + (fbid as String) + "&name=" + (name as String))
+    func createUser(user: User) -> Bool {
+        println(user.fbid)
+        println(user.name)
+        let urlString = domain + "?action=create_user&f_id=" + (user.fbid as String) + "&name=" + (user.name.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)! as String)
+        println(urlString);
+        let url = NSURL(string: urlString)
         var data = NSData(contentsOfURL: url!)
-        
+        println(data)
         if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
             if let val = json["val"] as? NSNumber {
-                println(val.integerValue > 0)
                 return val.integerValue > 0
             }
         }
