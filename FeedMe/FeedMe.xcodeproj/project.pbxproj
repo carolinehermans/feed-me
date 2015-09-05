@@ -31,6 +31,10 @@
 		27B9FAEF1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAEC1B9A6EC600701AC6 /* FBSDKMessengerShareKit.framework */; };
 		27B9FAF01B9A6EC600701AC6 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAED1B9A6EC600701AC6 /* FBSDKShareKit.framework */; };
 		27B9FAF31B9A70DA00701AC6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9FAF21B9A70DA00701AC6 /* Bolts.framework */; };
+		D92925F61B9B116A00786598 /* hearticon.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925F51B9B116A00786598 /* hearticon.png */; };
+		D92925F81B9B117100786598 /* foodicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925F71B9B117100786598 /* foodicon.png */; };
+		D92925FA1B9B11AF00786598 /* fruiticon.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925F91B9B11AF00786598 /* fruiticon.png */; };
+		D92925FC1B9B12D000786598 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D92925FB1B9B12D000786598 /* logo.png */; };
 		D99E371B1B9AEA7A0091C09A /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */; };
 		D99E371D1B9AF0310091C09A /* camicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D99E371C1B9AF0300091C09A /* camicon.png */; };
 		D99E371F1B9AF1070091C09A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */; };
@@ -77,6 +81,10 @@
 		27B9FAED1B9A6EC600701AC6 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		27B9FAF11B9A6F3200701AC6 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
 		27B9FAF21B9A70DA00701AC6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		D92925F51B9B116A00786598 /* hearticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hearticon.png; sourceTree = "<group>"; };
+		D92925F71B9B117100786598 /* foodicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodicon.png; sourceTree = "<group>"; };
+		D92925F91B9B11AF00786598 /* fruiticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fruiticon.png; sourceTree = "<group>"; };
+		D92925FB1B9B12D000786598 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		D99E371A1B9AEA4E0091C09A /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PatrickHand-Regular.ttf"; sourceTree = "<group>"; };
 		D99E371C1B9AF0300091C09A /* camicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camicon.png; sourceTree = "<group>"; };
 		D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -127,6 +135,10 @@
 		27A64B791B9AFEA0002E90F8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D92925FB1B9B12D000786598 /* logo.png */,
+				D92925F91B9B11AF00786598 /* fruiticon.png */,
+				D92925F71B9B117100786598 /* foodicon.png */,
+				D92925F51B9B116A00786598 /* hearticon.png */,
 				D99E371C1B9AF0300091C09A /* camicon.png */,
 				27A64B6A1B9AF8C5002E90F8 /* rectangle.png */,
 				27A64B6B1B9AF8C5002E90F8 /* tinyfeedme.png */,
@@ -302,9 +314,13 @@
 				27B9FACD1B9A69DD00701AC6 /* Main.storyboard in Resources */,
 				27A64B751B9AFE1C002E90F8 /* RecipeView.xib in Resources */,
 				D99E371F1B9AF1070091C09A /* Montserrat-Bold.ttf in Resources */,
+				D92925FC1B9B12D000786598 /* logo.png in Resources */,
+				D92925FA1B9B11AF00786598 /* fruiticon.png in Resources */,
 				27A64B6D1B9AF8C5002E90F8 /* tinyfeedme.png in Resources */,
+				D92925F61B9B116A00786598 /* hearticon.png in Resources */,
 				27B9FAD21B9A69DD00701AC6 /* LaunchScreen.xib in Resources */,
 				27A64B711B9AFDE3002E90F8 /* NoIngredientsView.xib in Resources */,
+				D92925F81B9B117100786598 /* foodicon.png in Resources */,
 				27B9FACF1B9A69DD00701AC6 /* Images.xcassets in Resources */,
 				27A64B6C1B9AF8C5002E90F8 /* rectangle.png in Resources */,
 				D99E371D1B9AF0310091C09A /* camicon.png in Resources */,
