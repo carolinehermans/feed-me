@@ -11,20 +11,44 @@ import UIKit
 class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var foodImage : UIImage? = nil;
+    var localUser : User = User();
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
         if (FBSDKAccessToken.currentAccessToken() == nil) {
-            self.displayModal();
+            self.displayModal()
         }
-        var server = Server();
-        server.doesUserExist(User());
+        self.getLocalUser()
+    }
+    
+    func getLocalUser() -> Void {
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me/", parameters:nil)
+        var user = User()
+        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            if ((error) != nil) {
+                // Process error
+                println("Error: \(error)")
+                
+            }
+            else {
+                if let fbid = result["id"] as? String {
+                    self.localUser.fbid = fbid
+                    if let name = result["name"] as? String {
+                        self.localUser.name = name
+                    }
+                }
+                var server = Server()
+                if (!server.doesUserExist(self.localUser)) {
+                    server.createUser(self.localUser);
+                } else {
+                    println("user exists")
+                }
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
