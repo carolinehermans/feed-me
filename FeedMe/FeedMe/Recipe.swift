@@ -15,5 +15,8 @@ class Recipe: NSObject {
     var ingredients = [Food]();
     var ingredientAmounts = [Int]();
     var ingredientUnits = [String]();
+    var missingIngredients = [Food]();
     var prepTime = "";
+    var urlString = "";
+    var imageURLString = "";
 }

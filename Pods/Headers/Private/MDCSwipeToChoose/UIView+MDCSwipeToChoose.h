@@ -1,1 +1,0 @@
-../../../MDCSwipeToChoose/MDCSwipeToChoose/Public/Views/UIView+MDCSwipeToChoose.h

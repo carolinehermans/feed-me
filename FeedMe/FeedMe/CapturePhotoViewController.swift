@@ -86,11 +86,23 @@ class CapturePhotoViewController: UIViewController {
                 var cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, kCGRenderingIntentDefault)
                 var image = UIImage(CGImage: cgImageRef, scale: 1.0, orientation: UIImageOrientation.Right)
                
-                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
                 
+                
+                var newSize:CGSize = CGSize(width: image!.size.width/10, height: image!.size.height/10)
+                let rect = CGRectMake(0,0, newSize.width, newSize.height)
+                UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+                
+                // image is a variable of type UIImage
+                image?.drawInRect(rect)
+                
+                let newImage = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+                UIImageWriteToSavedPhotosAlbum(newImage, nil, nil, nil)
                 var vc = self.presentingViewController?.storyboard!.instantiateViewControllerWithIdentifier("ImageProcessingViewController") as! ImageProcessingViewController
-                vc.image = image
+                vc.image = newImage
                 var parent = self.presentingViewController!
+                var server = Server()
+                server.uploadImage(newImage!)
                 self.dismissViewControllerAnimated(true, completion: {
                     parent.presentViewController(vc, animated: true, completion: nil)
                 })

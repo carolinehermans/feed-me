@@ -1,1 +1,0 @@
-../../../MDCSwipeToChoose/MDCSwipeToChoose/Internal/UIColor+MDCRGB8Bit.h

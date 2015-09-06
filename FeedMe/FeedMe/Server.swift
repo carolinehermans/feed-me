@@ -147,4 +147,62 @@ class Server: NSObject {
         return false
     }
     
+    func getAllRecipes(user: User) -> [Recipe] {
+        let urlString = domain + "?action=get_recipes&f_id=" + (user.fbid as String)
+        let url = NSURL(string: urlString)
+        var data = NSData(contentsOfURL: url!)
+        if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
+            if var val = json["val"] as? String {
+                var recipes = [Recipe]()
+                val = val.stringByReplacingOccurrencesOfString("[", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                val = val.stringByReplacingOccurrencesOfString("]", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                var strings = val.componentsSeparatedByString("+=+")
+                for string in strings {
+                    var fields = string.componentsSeparatedByString(",")
+                    var recipe = Recipe()
+                    recipe.name = fields[0]
+                    recipe.urlString = fields[1]
+                    recipe.imageURLString = fields[2]
+                    var foodStrings = fields[3].componentsSeparatedByString("+")
+                    for foodString in foodStrings {
+                        var food = Food()
+                        food.name = foodString
+                        recipe.ingredients.append(food)
+                    }
+                    var missingFoods = fields[4].componentsSeparatedByString("+")
+                    for foodString in missingFoods {
+                        var food = Food()
+                        food.name = foodString
+                        recipe.missingIngredients.append(food)
+                    }
+                    recipes.append(recipe)
+                }
+                return recipes
+            }
+        }
+        return []
+    }
+    
+    func uploadImage(image: UIImage) {
+        var dataString = UIImageJPEGRepresentation(image, 0.5).base64EncodedStringWithOptions(nil)
+        var url: NSURL = NSURL(string: "http://ec2-52-20-44-70.compute-1.amazonaws.com:8000/upload")!
+        var request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
+        var bodyData = dataString
+        request.HTTPMethod = "POST"
+        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+            {
+                
+                (response, data, error) in
+                
+                var datastring = NSString(data: data, encoding: NSUTF8StringEncoding)
+                println("data:")
+                println(datastring)
+                NSUserDefaults.standardUserDefaults().setObject(datastring, forKey: "box")
+                NSUserDefaults.standardUserDefaults().synchronize()
+                
+        }
+        
+    }
+    
 }

@@ -17,9 +17,26 @@ class ImageProcessingViewController: UIViewController {
         super.viewDidLoad()
         println("here")
         self.imageView.image = self.image;
-        println(image.size);
-        drawCustomImage(CGPointMake(0,0), bottomRight: CGPointMake(100,100))
         // Do any additional setup after loading the view.
+        if(self.checkDefaults()) {
+            self.drawBoxes()
+            NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "box")
+        }
+    }
+    
+    func drawBoxes() {
+        var drawInstructions = (NSUserDefaults.standardUserDefaults().objectForKey("box") as! String).componentsSeparatedByString(";")
+        for drawInstruction in drawInstructions {
+            var coordinateLabelPair = drawInstruction.componentsSeparatedByString("-")
+            if (coordinateLabelPair.count < 2) {
+                continue;
+            }
+            var coords = (coordinateLabelPair[0] as String).componentsSeparatedByString(",")
+            var object = coordinateLabelPair[1]
+            if (object != "unknown") {
+                self.drawCustomImage(CGPointMake(CGFloat((coords[0] as NSString).floatValue), CGFloat((coords[1] as NSString).floatValue)), bottomRight: CGPointMake(CGFloat((coords[2] as NSString).floatValue), CGFloat((coords[3] as NSString).floatValue)))
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +44,13 @@ class ImageProcessingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func checkDefaults() -> Bool {
+        if (NSUserDefaults.standardUserDefaults().objectForKey("box") == nil) {
+            sleep(1)
+            self.checkDefaults()
+        }
+        return true;
+    }
     @IBAction func dismiss() {
         self.dismissViewControllerAnimated(true, completion: nil);
     }
