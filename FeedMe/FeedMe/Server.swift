@@ -226,6 +226,62 @@ class Server: NSObject {
         return recipe;
     }
     
+    func getFavoriteRecipes(user: User) -> [Recipe] {
+        let urlString = domain + "?action=get_favorite_recipes&f_id=" + (user.fbid as String)
+        let url = NSURL(string: urlString)
+        var data = NSData(contentsOfURL: url!)
+        if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
+            if var val = json["val"] as? String {
+                var recipes = [Recipe]()
+                val = val.stringByReplacingOccurrencesOfString("[", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                val = val.stringByReplacingOccurrencesOfString("]", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                var strings = val.componentsSeparatedByString("+=+")
+                for string in strings {
+                    var fields = string.componentsSeparatedByString(",")
+                    var recipe = Recipe()
+                    recipe.name = fields[0]
+                    recipe.urlString = fields[1]
+                    recipe.imageURLString = fields[2]
+                    recipes.append(recipe)
+                }
+                return recipes
+            }
+        }
+        return []
+    }
+    
+    func setFavoriteRecipe(user: User, recipe: Recipe) -> Bool {
+        let urlString = domain + "?action=set_favorite_recipe&f_id=" + (user.fbid as String) + "&thumbnail=" + recipe.imageURLString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "&link=" + recipe.urlString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "&name=" + recipe.name.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        println(urlString)
+        let url = NSURL(string: urlString)
+        println(url)
+        var data = NSData(contentsOfURL: url!)
+        if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
+            if var val = json["val"] as? String {
+                if let val = json["val"] as? NSNumber {
+                    return val.integerValue > 0
+                }
+            }
+        }
+        return false
+    }
+    
+    func deleteFavoriteRecipe(user: User, recipe: Recipe) -> Bool {
+        let urlString = domain + "?action=delete_favorite_recipe&f_id=" + (user.fbid as String) + "&name=" + recipe.name.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        println(urlString)
+        let url = NSURL(string: urlString)
+        println(url)
+        var data = NSData(contentsOfURL: url!)
+        if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
+            if var val = json["val"] as? String {
+                if let val = json["val"] as? NSNumber {
+                    return val.integerValue > 0
+                }
+            }
+        }
+        return false
+    }
+    
     func uploadImage(image: UIImage) {
         var dataString = UIImageJPEGRepresentation(image, 0.5).base64EncodedStringWithOptions(nil)
         var url: NSURL = NSURL(string: "http://ec2-52-20-44-70.compute-1.amazonaws.com:8000/upload")!
@@ -239,7 +295,7 @@ class Server: NSObject {
         
         
         var datastring = NSString(data: urlData!, encoding: NSUTF8StringEncoding)
-        NSUserDefaults.standardUserDefaults().setObject(datastring, forKey: "boxxxyy")
+        NSUserDefaults.standardUserDefaults().setObject(datastring, forKey: "yeongwoo")
         
         
     }

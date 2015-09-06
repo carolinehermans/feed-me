@@ -143,7 +143,7 @@ class CapturePhotoViewController: UIViewController {
         let screenshotButton = UIButton()
         screenshotButton.setImage(UIImage(named: "camicon.png"), forState: UIControlState.Normal)
         screenshotButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        screenshotButton.frame = CGRectMake(0, self.view.frame.height/2, 300, 500)
+        screenshotButton.frame = CGRectMake(0, 3*self.view.frame.height/4, 50, 50)
         screenshotButton.addTarget(self, action: "capturePicture", forControlEvents: .TouchUpInside)
         self.view.addSubview(screenshotButton)
         screenshotButton.center = CGPointMake(self.view.frame.width/2, screenshotButton.center.y)

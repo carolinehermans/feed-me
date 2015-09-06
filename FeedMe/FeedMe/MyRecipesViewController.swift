@@ -164,4 +164,8 @@ class MyRecipesViewController: UIViewController, UITextFieldDelegate {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
+    @IBAction func addFavorite() {
+        var server = Server()
+        server.setFavoriteRecipe(self.localUser, recipe: self.currentRecipe)
+    }
 }

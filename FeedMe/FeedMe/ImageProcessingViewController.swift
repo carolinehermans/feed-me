@@ -51,7 +51,7 @@ class ImageProcessingViewController: UIViewController {
     }
 
     func getImageFromString() -> UIImage? {
-        var imageString: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("boxxxyy")
+        var imageString: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("yeongwoo")
         var splitString = (imageString?.componentsSeparatedByString("^##^") as! [String])
         imageString = splitString[1]
         var objectString = splitString[0]
@@ -88,7 +88,7 @@ class ImageProcessingViewController: UIViewController {
     }
     
     func checkDefaults() -> Bool {
-        if (NSUserDefaults.standardUserDefaults().objectForKey("boxxxyy") == nil) {
+        if (NSUserDefaults.standardUserDefaults().objectForKey("yeongwoo") == nil) {
             self.checkDefaults()
         }
         return true;
