@@ -13,10 +13,12 @@ class Recipe: NSObject {
     var servings = 0;
     var unit = "";
     var ingredients = [Food]();
-    var ingredientAmounts = [Int]();
+    var ingredientAmounts = [String]();
     var ingredientUnits = [String]();
     var missingIngredients = [Food]();
+    var instructions = [String]();
     var prepTime = "";
     var urlString = "";
     var imageURLString = "";
+    var recipeID = "";
 }
