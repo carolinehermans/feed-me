@@ -68,5 +68,23 @@ class ImageProcessingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+   /* func frontCardViewFrame() -> CGRect {
+        horizontalPadding := 20.0;
+        topPadding = 60.0;
+        bottomPadding = 200.0;
+        return CGRectMake(horizontalPadding,
+            topPadding,
+            CGRectGetWidth(self.view.frame) - (horizontalPadding * 2),
+            CGRectGetHeight(self.view.frame) - bottomPadding);
+    }
+    
+    - (CGRect)backCardViewFrame {
+    CGRect frontFrame = [self frontCardViewFrame];
+    return CGRectMake(frontFrame.origin.x,
+    frontFrame.origin.y + 10.f,
+    CGRectGetWidth(frontFrame),
+    CGRectGetHeight(frontFrame));
+    }*/
 
 }
