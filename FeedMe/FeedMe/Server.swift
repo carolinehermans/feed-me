@@ -127,8 +127,8 @@ class Server: NSObject {
         let url = NSURL(string: urlString)
         var data = NSData(contentsOfURL: url!)
         if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
-            if let val = json["val"] as? NSArray {
-                return val as! [String]
+            if let val = json["val"] as? String {
+                return val.componentsSeparatedByString(",")
             }
         }
         return []

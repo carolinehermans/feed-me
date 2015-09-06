@@ -13,5 +13,6 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>
 #import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
+#import <MDCSwipeToChoose/MDCSwipeToChoose.h>
 
 #endif

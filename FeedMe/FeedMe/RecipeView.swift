@@ -1,9 +1,9 @@
 //
 //  RecipeView.swift
-//  FeedMe
+//  
 //
 //  Created by Jordan Brown on 9/5/15.
-//  Copyright (c) 2015 woosufjordaline. All rights reserved.
+//
 //
 
 import UIKit
@@ -17,5 +17,8 @@ class RecipeView: UIView {
         // Drawing code
     }
     */
+    class func instanceFromNib() -> UIView {
+        return UINib(nibName: "RecipeView", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! UIView
+    }
 
 }

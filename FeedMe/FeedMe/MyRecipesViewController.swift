@@ -8,13 +8,14 @@
 
 import UIKit
 
+private var numberOfCards: UInt = 5
 class MyRecipesViewController: UIViewController, UITextFieldDelegate {
 
     var foodImage : UIImage? = nil;
     var localUser : User = User();
     
     @IBOutlet var textField : UITextField!
-    
+    @IBOutlet var recipeView : UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +23,7 @@ class MyRecipesViewController: UIViewController, UITextFieldDelegate {
         // Handle the text field’s user input through delegate callbacks.
         textField.delegate = self
         var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-        view.addGestureRecognizer(tap)
+        self.view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +51,4 @@ class MyRecipesViewController: UIViewController, UITextFieldDelegate {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-
-
 }
