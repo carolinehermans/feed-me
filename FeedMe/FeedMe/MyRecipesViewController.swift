@@ -16,6 +16,16 @@ class MyRecipesViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var textField : UITextField!
     @IBOutlet var recipeView : UIView!
+    @IBOutlet var foodNameLabel : UILabel!
+    @IBOutlet var prepTimeLabel : UILabel!
+    @IBOutlet var foodImageView : UIImageView!
+    @IBOutlet var ingredientFractionLabel : UILabel!
+    @IBOutlet var friendInfoLabel : UILabel!
+    @IBOutlet var likeButton : UIButton!
+    @IBOutlet var dislikeButton : UIButton!
+    @IBOutlet var bigBG : UIImageView!
+    @IBOutlet var smallBG : UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

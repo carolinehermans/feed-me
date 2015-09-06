@@ -222,14 +222,6 @@
                                 <color key="textColor" red="0.70980392160000005" green="0.25882352939999997" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tinderheart.png" id="MRO-br-H64">
-                                <rect key="frame" x="216" y="428" width="65" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tinderx.png" id="Tag-c7-qS3">
-                                <rect key="frame" x="48" y="428" width="54" height="53"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KKj-p0-WX3">
                                 <rect key="frame" x="128" y="163" width="64" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -248,11 +240,32 @@
                                 <rect key="frame" x="84" y="190" width="156" height="136"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aa0-oq-fS5">
+                                <rect key="frame" x="51" y="430" width="53" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="tinderx.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eXq-Qi-GVz">
+                                <rect key="frame" x="208" y="428" width="64" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="tinderheart.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Recipes" image="foodicon.png" id="486-CL-JCo"/>
                     <connections>
+                        <outlet property="bigBG" destination="FaP-Eb-SS2" id="c3R-o8-4wY"/>
+                        <outlet property="foodImageView" destination="eLD-CT-HLM" id="GQD-pg-cqR"/>
+                        <outlet property="foodNameLabel" destination="Kp2-L8-AVm" id="MAA-mz-ORp"/>
+                        <outlet property="friendInfoLabel" destination="uQz-i9-5b9" id="T5A-mi-ZAh"/>
+                        <outlet property="ingredientFractionLabel" destination="RPh-B7-hZV" id="ZkI-hC-aFw"/>
+                        <outlet property="prepTimeLabel" destination="KKj-p0-WX3" id="hwU-5R-c8q"/>
+                        <outlet property="smallBG" destination="Pkx-UV-pKC" id="6HH-Q6-i5V"/>
                         <outlet property="textField" destination="Rft-7H-LY7" id="kux-QP-nRB"/>
                     </connections>
                 </viewController>
@@ -326,7 +339,7 @@
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mge-GK-fEd" id="pE7-46-CUx">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
