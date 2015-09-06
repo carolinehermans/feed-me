@@ -88,6 +88,9 @@ class Server: NSObject {
     func submitIngredients(user: User, ingredients: [String]) -> Bool {
         var ingredientString = ""
         for ingredient in ingredients {
+            if (ingredient == "") {
+                continue;
+            }
             ingredientString += ingredient.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
             if (ingredient != ingredients.last) {
                 ingredientString += ","
@@ -170,10 +173,13 @@ class Server: NSObject {
                         recipe.ingredients.append(food)
                     }
                     var missingFoods = fields[4].componentsSeparatedByString("+")
+                    println(strings)
                     for foodString in missingFoods {
                         var food = Food()
                         food.name = foodString
-                        recipe.missingIngredients.append(food)
+                        if (food.name != " " && food.name != "") {
+                            recipe.missingIngredients.append(food)
+                        }
                     }
                     recipes.append(recipe)
                 }
@@ -183,6 +189,17 @@ class Server: NSObject {
         return []
     }
     
+    func getDetailedRecipe(urlString: String, name: String) -> Recipe {
+        let url = NSURL(string: domain + "?action=get_detailed_recipe&url=" + urlString + "&name=" + name)
+        var data = NSData(contentsOfURL: url!)
+        if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
+            if var val = json["val"] as? String {
+                println(val)
+            }
+        }
+        return Recipe()
+    }
+    
     func uploadImage(image: UIImage) {
         var dataString = UIImageJPEGRepresentation(image, 0.5).base64EncodedStringWithOptions(nil)
         var url: NSURL = NSURL(string: "http://ec2-52-20-44-70.compute-1.amazonaws.com:8000/upload")!
@@ -190,18 +207,14 @@ class Server: NSObject {
         var bodyData = dataString
         request.HTTPMethod = "POST"
         request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
-            {
-                
-                (response, data, error) in
-                
-                var datastring = NSString(data: data, encoding: NSUTF8StringEncoding)
-                println("data:")
-                println(datastring)
-                NSUserDefaults.standardUserDefaults().setObject(datastring, forKey: "box")
-                NSUserDefaults.standardUserDefaults().synchronize()
-                
-        }
+        var response: NSURLResponse?
+        var error: NSError?
+        let urlData = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: &error);
+        
+        
+        var datastring = NSString(data: urlData!, encoding: NSUTF8StringEncoding)
+        NSUserDefaults.standardUserDefaults().setObject(datastring, forKey: "boxxxyy")
+        
         
     }
     

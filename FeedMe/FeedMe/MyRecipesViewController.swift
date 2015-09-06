@@ -60,13 +60,14 @@ class MyRecipesViewController: UIViewController, UITextFieldDelegate {
         var weHave = String(recipe!.ingredients.count)
         self.ingredientFractionLabel.text = "✓ " + String(weHave) + " out of " + String(totalFoods) + " ingredients"
         var server = Server()
-        var friends = server.getAllFriends(self.localUser)
-        var foods = [String]()
-        for friend in friends {
-            foods += server.getAllIngredients(friend)
+        var foodsFriendsHave = 0
+        for missingIngredient in (recipe!.missingIngredients as [Food]){
+            println(missingIngredient.name)
+            if (server.whoHasIngredient(missingIngredient.name).count > 0) {
+                foodsFriendsHave++
+            }
         }
-        println(foods)
-        
+        self.friendInfoLabel.text = "Your friends have " + String(foodsFriendsHave) + " of " + String(recipe!.missingIngredients.count) + " missing ingredients."
     }
     
     @IBAction func showNextRecipe() {
@@ -83,11 +84,12 @@ class MyRecipesViewController: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(tap)
         self.foodNameLabel.adjustsFontSizeToFitWidth = true
         self.hideInfo()
+        self.getLocalUser()
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.getLocalUser()
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

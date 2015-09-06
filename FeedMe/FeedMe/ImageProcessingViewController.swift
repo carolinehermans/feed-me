@@ -11,6 +11,7 @@ import UIKit
 class ImageProcessingViewController: UIViewController {
 
     @IBOutlet var imageView : UIImageView!
+    var localUser : User = User();
     var image : UIImage!;
     
     override func viewDidLoad() {
@@ -18,10 +19,52 @@ class ImageProcessingViewController: UIViewController {
         println("here")
         self.imageView.image = self.image;
         // Do any additional setup after loading the view.
-        if(self.checkDefaults()) {
-            self.drawBoxes()
-            NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "box")
-        }
+        self.imageView.image = self.getImageFromString()
+        let doneButton = UIButton()
+        doneButton.setTitle("Done", forState: .Normal)
+        doneButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        doneButton.frame = CGRectMake(self.view.frame.width - 60, 0, 50, 50)
+        doneButton.addTarget(self, action: "doneClicked", forControlEvents: .TouchUpInside)
+        self.view.addSubview(doneButton)
+    }
+    func getLocalUser(objects: [String]) -> Void {
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me/", parameters:nil)
+        var user = User()
+        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            if ((error) != nil) {
+                // Process error
+                println("Error: \(error)")
+                
+            }
+            else {
+                if let fbid = result["id"] as? String {
+                    self.localUser.fbid = fbid
+                    if let name = result["name"] as? String {
+                        self.localUser.name = name
+                    }
+                }
+                var server = Server()
+                server.submitIngredients(self.localUser, ingredients: objects)
+                
+            }
+        })
+    }
+
+    func getImageFromString() -> UIImage? {
+        var imageString: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("boxxxyy")
+        var splitString = (imageString?.componentsSeparatedByString("^##^") as! [String])
+        imageString = splitString[1]
+        var objectString = splitString[0]
+        var objects = objectString.componentsSeparatedByString(";")
+        self.getLocalUser(objects)
+        var str = "data:image/jpg;base64,"
+        str = str.stringByAppendingString((imageString as! String))
+        var imageData = NSData(contentsOfURL: NSURL(string: str)!)
+        return UIImage(data: imageData!)
+    }
+    
+    func doneClicked() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func drawBoxes() {
@@ -45,8 +88,7 @@ class ImageProcessingViewController: UIViewController {
     }
     
     func checkDefaults() -> Bool {
-        if (NSUserDefaults.standardUserDefaults().objectForKey("box") == nil) {
-            sleep(1)
+        if (NSUserDefaults.standardUserDefaults().objectForKey("boxxxyy") == nil) {
             self.checkDefaults()
         }
         return true;
