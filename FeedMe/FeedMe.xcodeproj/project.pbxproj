@@ -56,6 +56,8 @@
 		D99E371F1B9AF1070091C09A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */; };
 		D9B7D7931B9BD9B700155929 /* chicken2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9B7D7921B9BD9B700155929 /* chicken2.jpg */; };
 		D9CEE4911B9A8F790010E71D /* FacebookLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CEE4901B9A8F790010E71D /* FacebookLoginViewController.swift */; };
+		D9F171B51B9C18BB00678699 /* clickedheart.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F171B41B9C18BB00678699 /* clickedheart.png */; };
+		D9F171B71B9C18BE00678699 /* clickedx.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F171B61B9C18BE00678699 /* clickedx.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,8 @@
 		D99E371E1B9AF1070091C09A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		D9B7D7921B9BD9B700155929 /* chicken2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chicken2.jpg; sourceTree = "<group>"; };
 		D9CEE4901B9A8F790010E71D /* FacebookLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginViewController.swift; sourceTree = "<group>"; };
+		D9F171B41B9C18BB00678699 /* clickedheart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clickedheart.png; sourceTree = "<group>"; };
+		D9F171B61B9C18BE00678699 /* clickedx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clickedx.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +166,11 @@
 		27A64B791B9AFEA0002E90F8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D9F171B41B9C18BB00678699 /* clickedheart.png */,
 				D9B7D7921B9BD9B700155929 /* chicken2.jpg */,
 				D92926181B9BBD8E00786598 /* chicken.jpg */,
 				D92926101B9B847A00786598 /* logoo.png */,
+				D9F171B61B9C18BE00678699 /* clickedx.png */,
 				D92925FB1B9B12D000786598 /* logo.png */,
 				D929261E1B9BC5DA00786598 /* darkerrectangle.png */,
 				D92925F91B9B11AF00786598 /* fruiticon.png */,
@@ -369,8 +375,10 @@
 				D92926171B9BBC1000786598 /* RecipeView.xib in Resources */,
 				D92926271B9BC84C00786598 /* tinderx.png in Resources */,
 				D9B7D7931B9BD9B700155929 /* chicken2.jpg in Resources */,
+				D9F171B51B9C18BB00678699 /* clickedheart.png in Resources */,
 				D92926041B9B4FFE00786598 /* cameraiconn.png in Resources */,
 				D99E371F1B9AF1070091C09A /* Montserrat-Bold.ttf in Resources */,
+				D9F171B71B9C18BE00678699 /* clickedx.png in Resources */,
 				D92925FC1B9B12D000786598 /* logo.png in Resources */,
 				D92926261B9BC84C00786598 /* tinderheart.png in Resources */,
 				D92926191B9BBD8E00786598 /* chicken.jpg in Resources */,
