@@ -1,0 +1,6 @@
+framework module MDCSwipeToChoose {
+  umbrella header "MDCSwipeToChoose-umbrella.h"
+
+  export *
+  module * { export * }
+}

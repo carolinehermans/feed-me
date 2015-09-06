@@ -1,0 +1,4 @@
+pod "MDCSwipeToChoose"
+xcodeproj 'FeedMe/FeedMe.xcodeproj'
+use_frameworks!
+pod "Koloda"
