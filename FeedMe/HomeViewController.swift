@@ -34,6 +34,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     func filterList() { // should probably be called sort and not filter
         if (self.items.count < 2) {
+            self.tableView.reloadData();
             return;
         }
         self.items.sort() { $0 < $1 }
