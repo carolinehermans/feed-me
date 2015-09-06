@@ -10,6 +10,6 @@ import UIKit
 
 class Food: NSObject {
     var name = "";
-    var quantity = 0;
+    var quantity = "";
     var unit = "";
 }

@@ -190,14 +190,35 @@ class Server: NSObject {
     }
     
     func getDetailedRecipe(urlString: String, name: String) -> Recipe {
+        var recipe : Recipe = Recipe();
         let url = NSURL(string: domain + "?action=get_detailed_recipe&url=" + urlString + "&name=" + name)
         var data = NSData(contentsOfURL: url!)
         if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
             if var val = json["val"] as? String {
-                println(val)
+                var tmp = val.componentsSeparatedByString(";")
+                var ing = tmp[0].componentsSeparatedByString("+");
+                var names = ing[0].componentsSeparatedByString(",");
+                var quant = ing[1].componentsSeparatedByString(",");
+                var unit = ing[2].componentsSeparatedByString(",");
+                var foods = [Food]();
+                for var idx = 0; idx < ing.count; idx++ {
+                    var tmpFood = Food();
+                    tmpFood.name = names[idx];
+                    tmpFood.quantity = quant[idx];
+                    tmpFood.unit = unit[idx];
+                    foods.append(tmpFood);
+                }
+                recipe.ingredients = foods;
+                for var idx = 1; idx < tmp.count - 1; idx++ {
+                    recipe.instructions.append(tmp[idx]);
+                }
+                recipe.prepTime = tmp[tmp.count - 1];
+            }
+            if var msg = json["msg"] as? String {
+                recipe.prepTime = msg;
             }
         }
-        return Recipe()
+        return recipe;
     }
     
     func uploadImage(image: UIImage) {
