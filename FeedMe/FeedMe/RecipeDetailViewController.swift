@@ -14,10 +14,33 @@ class RecipeDetailViewController: UIViewController {
     @IBOutlet var recipeImageView : UIImageView!
     @IBOutlet var recipeNameLabel : UILabel!
     @IBOutlet var recipeInstructionsTextView : UITextView!
+    var name = ""
+    var picture = UIImage()
+    var ingredients = [Food]()
+    var instructions = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.recipeImageView.image = self.picture
+        self.recipeNameLabel.text = self.name
+        
+        var instructionsString = ""
+        for instruction in self.instructions {
+            instructionsString += (instructionsString + "\n\n")
+        }
+        
+        self.recipeInstructionsTextView.text = instructionsString
+        
+        var ingredientString = ""
+        for food in self.ingredients {
+            ingredientString = ingredientString + food.name + ": "
+            ingredientString += (food.quantity + " " + food.unit)
+            ingredientString += "\n\n"
+        }
+        
+        self.ingredientsTextView.text = ingredientString
+        
+        
         // Do any additional setup after loading the view.
     }
 
