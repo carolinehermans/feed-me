@@ -191,11 +191,15 @@ class Server: NSObject {
     
     func getDetailedRecipe(urlString: String, name: String) -> Recipe {
         var recipe : Recipe = Recipe();
-        let url = NSURL(string: domain + "?action=get_detailed_recipe&url=" + urlString + "&name=" + name)
+        println(name.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding))
+        println(urlString)
+        
+        let url = NSURL(string: domain + "?action=get_detailed_recipe&url=" + urlString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) + "&name=" + name.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
         var data = NSData(contentsOfURL: url!)
         if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
             if var val = json["val"] as? String {
                 var tmp = val.componentsSeparatedByString(";")
+                println(tmp)
                 var ing = tmp[0].componentsSeparatedByString("+");
                 var names = ing[0].componentsSeparatedByString(",");
                 var quant = ing[1].componentsSeparatedByString(",");
@@ -211,6 +215,7 @@ class Server: NSObject {
                 recipe.ingredients = foods;
                 for var idx = 1; idx < tmp.count - 1; idx++ {
                     recipe.instructions.append(tmp[idx]);
+                    println(tmp[idx])
                 }
                 recipe.prepTime = tmp[tmp.count - 1];
             }

@@ -23,12 +23,14 @@ class RecipeDetailViewController: UIViewController {
         super.viewDidLoad()
         self.recipeImageView.image = self.picture
         self.recipeNameLabel.text = self.name
+        self.recipeNameLabel.adjustsFontSizeToFitWidth = true
         
         var instructionsString = ""
+        println(self.instructions)
         for instruction in self.instructions {
-            instructionsString += (instructionsString + "\n\n")
+            instructionsString += (instruction + "\n\n")
         }
-        
+        println(instructionsString)
         self.recipeInstructionsTextView.text = instructionsString
         
         var ingredientString = ""
@@ -50,6 +52,9 @@ class RecipeDetailViewController: UIViewController {
     }
     
 
+    @IBAction func doneTapped() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

@@ -14,12 +14,13 @@ class MyRecipesViewController: UIViewController, UITextFieldDelegate {
     var foodImage : UIImage? = nil;
     var localUser : User = User();
     var recipes = [Recipe]()
+    var currentRecipe = Recipe()
     
     @IBOutlet var textField : UITextField!
     @IBOutlet var recipeView : UIView!
     @IBOutlet var foodNameLabel : UILabel!
     @IBOutlet var prepTimeLabel : UILabel!
-    @IBOutlet var foodImageView : UIImageView!
+    @IBOutlet var foodButton : UIButton!
     @IBOutlet var ingredientFractionLabel : UILabel!
     @IBOutlet var friendInfoLabel : UILabel!
     @IBOutlet var likeButton : UIButton!
@@ -29,7 +30,7 @@ class MyRecipesViewController: UIViewController, UITextFieldDelegate {
     
     func hideInfo() {
         self.foodNameLabel.hidden = true
-        self.foodImageView.hidden = true
+        self.foodButton.hidden = true
         self.ingredientFractionLabel.hidden = true
         self.friendInfoLabel.hidden = true
         self.likeButton.hidden = true
@@ -39,7 +40,7 @@ class MyRecipesViewController: UIViewController, UITextFieldDelegate {
     }
     func showInfo() {
         self.foodNameLabel.hidden = false
-        self.foodImageView.hidden = false
+        self.foodButton.hidden = false
         self.ingredientFractionLabel.hidden = false
         self.friendInfoLabel.hidden = false
         self.likeButton.hidden = false
@@ -52,10 +53,11 @@ class MyRecipesViewController: UIViewController, UITextFieldDelegate {
         if (recipe == nil) {
             return; // show no more recipes screen
         }
+        self.currentRecipe = recipe!
         foodNameLabel.text = recipe!.name
         let url = NSURL(string: recipe!.imageURLString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()))
         let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-        self.foodImageView.image = UIImage(data: data!)
+        self.foodButton.setImage(UIImage(data: data!), forState: .Normal)
         var totalFoods = recipe!.ingredients.count + recipe!.missingIngredients.count
         var weHave = String(recipe!.ingredients.count)
         self.ingredientFractionLabel.text = "✓ " + String(weHave) + " out of " + String(totalFoods) + " ingredients"
@@ -70,8 +72,30 @@ class MyRecipesViewController: UIViewController, UITextFieldDelegate {
         self.friendInfoLabel.text = "Your friends have " + String(foodsFriendsHave) + " of " + String(recipe!.missingIngredients.count) + " missing ingredients."
     }
     
+    @IBAction func clickedRecipe() {
+        println("here")
+        var server = Server()
+        println("now her")
+        var detailedRecipe = server.getDetailedRecipe(self.currentRecipe.urlString, name: self.currentRecipe.name)
+        println("her??")
+        let detailedRecipeVC = self.storyboard?.instantiateViewControllerWithIdentifier("RecipeDetailViewController") as! RecipeDetailViewController
+        detailedRecipeVC.name = self.currentRecipe.name
+        println(self.currentRecipe.name)
+        detailedRecipeVC.ingredients = detailedRecipe.ingredients
+        detailedRecipeVC.instructions = detailedRecipe.instructions
+        let url = NSURL(string: self.currentRecipe.imageURLString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()))
+        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+        detailedRecipeVC.picture = UIImage(data: data!)!
+        self.presentViewController(detailedRecipeVC, animated: true, completion: nil)
+    }
+    
     @IBAction func showNextRecipe() {
+        if (self.recipes.count < 1) {
+            return;
+        }
+        var object = self.recipes[0];
         self.recipes.removeAtIndex(0)
+        self.recipes.append(object)
         self.populateView(self.recipes.first)
     }
     override func viewDidLoad() {

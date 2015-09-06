@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		274ED2D21B9A827000B279AC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274ED2D11B9A827000B279AC /* HomeViewController.swift */; };
 		2756B0F91B9C30D40058BAB3 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756B0F81B9C30D40058BAB3 /* RecipeDetailViewController.swift */; };
+		2756B0FB1B9C51290058BAB3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756B0FA1B9C51290058BAB3 /* FavoritesViewController.swift */; };
 		27A64B691B9AF71D002E90F8 /* FeedMeTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A64B681B9AF71D002E90F8 /* FeedMeTabBarControllerViewController.swift */; };
 		27A64B6C1B9AF8C5002E90F8 /* rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A64B6A1B9AF8C5002E90F8 /* rectangle.png */; };
 		27A64B6D1B9AF8C5002E90F8 /* tinyfeedme.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A64B6B1B9AF8C5002E90F8 /* tinyfeedme.png */; };
@@ -73,6 +74,7 @@
 /* Begin PBXFileReference section */
 		274ED2D11B9A827000B279AC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
 		2756B0F81B9C30D40058BAB3 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		2756B0FA1B9C51290058BAB3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		27A64B681B9AF71D002E90F8 /* FeedMeTabBarControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedMeTabBarControllerViewController.swift; sourceTree = "<group>"; };
 		27A64B6A1B9AF8C5002E90F8 /* rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rectangle.png; sourceTree = "<group>"; };
 		27A64B6B1B9AF8C5002E90F8 /* tinyfeedme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tinyfeedme.png; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				D9CEE4901B9A8F790010E71D /* FacebookLoginViewController.swift */,
 				27B934F61B9AB1D3004CDCB7 /* ImageProcessingViewController.swift */,
 				27B9FACB1B9A69DD00701AC6 /* Main.storyboard */,
+				2756B0FA1B9C51290058BAB3 /* FavoritesViewController.swift */,
 				2756B0F81B9C30D40058BAB3 /* RecipeDetailViewController.swift */,
 				27D4BF9E1B9BD03F00D5A967 /* RecipeView.swift */,
 				D92926161B9BBC1000786598 /* RecipeView.xib */,
@@ -423,6 +426,7 @@
 				27ADFFE71B9BA84E005691CA /* AllRecipeHTMLParser.swift in Sources */,
 				27B9FAC81B9A69DD00701AC6 /* FeedMe.xcdatamodeld in Sources */,
 				27A64B7B1B9B0500002E90F8 /* Server.swift in Sources */,
+				2756B0FB1B9C51290058BAB3 /* FavoritesViewController.swift in Sources */,
 				2756B0F91B9C30D40058BAB3 /* RecipeDetailViewController.swift in Sources */,
 				D92926021B9B3F2200786598 /* MyRecipesViewController.swift in Sources */,
 				27A64B6F1B9AFDC6002E90F8 /* NoIngredientsView.swift in Sources */,
